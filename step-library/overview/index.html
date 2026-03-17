@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-step-library/overview" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Step Library Overview | ProActions Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://em-al-wi.github.io/proactions-docs/step-library/overview"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Step Library Overview | ProActions Documentation"><meta data-rh="true" name="description" content="ProActions provides a comprehensive library of workflow steps organized into categories. Each step performs a specific function and can be combined to create powerful automation workflows."><meta data-rh="true" property="og:description" content="ProActions provides a comprehensive library of workflow steps organized into categories. Each step performs a specific function and can be combined to create powerful automation workflows."><link data-rh="true" rel="icon" href="/proactions-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://em-al-wi.github.io/proactions-docs/step-library/overview"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/step-library/overview" hreflang="en"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/step-library/overview" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Step Library Overview","item":"https://em-al-wi.github.io/proactions-docs/step-library/overview"}]}</script><link rel="stylesheet" href="/proactions-docs/assets/css/styles.85e57e58.css">
+<script src="/proactions-docs/assets/js/runtime~main.ae25cf5f.js" defer="defer"></script>
+<script src="/proactions-docs/assets/js/main.71e5748b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_HLd7" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proactions-docs/"><b class="navbar__title text--truncate">ProActions</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proactions-docs/intro">Documentation</a><a class="navbar__item navbar__link" href="/proactions-docs/release-notes">Release Notes</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_k5YO colorModeToggle_kzyk"><button class="clean-btn toggleButton_iYsp toggleButtonDisabled_V_0o" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o lightToggleIcon_Z_lD"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o darkToggleIcon_EApx"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o systemToggleIcon_ewKK"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_dFOU"><div class="navbar__search searchBarContainer__EhK" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_LnXF" value=""><div class="loadingRing__4YV searchBarLoadingRing_yZZB"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_zgir"><div class="docsWrapper_j6Sj"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_qpav" type="button"></button><div class="docRoot_qRRu"><aside class="theme-doc-sidebar-container docSidebarContainer_kQHK"><div class="sidebarViewport_yi2q"><div class="sidebar_F5aY"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_i4M9"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/proactions-docs/intro"><span title="Welcome to ProActions" class="linkLabel_N8i1">Welcome to ProActions</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/setup/overview"><span title="Setup" class="categoryLinkLabel_fwTo">Setup</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/overview"><span title="Setup Overview" class="linkLabel_N8i1">Setup Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/installation"><span title="Installation" class="linkLabel_N8i1">Installation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/configuration"><span title="Configuration" class="linkLabel_N8i1">Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/keyboard-shortcuts"><span title="Keyboard Shortcuts" class="linkLabel_N8i1">Keyboard Shortcuts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/vscode-setup"><span title="VSIDE and File Conventions" class="linkLabel_N8i1">VSIDE and File Conventions</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/getting-started/your-first-flow"><span title="Getting Started" class="categoryLinkLabel_fwTo">Getting Started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/your-first-flow"><span title="Your First Flow" class="linkLabel_N8i1">Your First Flow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/understanding-steps"><span title="Understanding Steps" class="linkLabel_N8i1">Understanding Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/working-with-variables"><span title="Working with Variables" class="linkLabel_N8i1">Working with Variables</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/using-services"><span title="Using Services" class="linkLabel_N8i1">Using Services</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/proactions-docs/step-library/overview"><span title="Step Library" class="categoryLinkLabel_fwTo">Step Library</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/proactions-docs/step-library/overview"><span title="Step Library Overview" class="linkLabel_N8i1">Step Library Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/control-steps"><span title="Control Steps" class="linkLabel_N8i1">Control Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/llm-steps"><span title="LLM Steps" class="linkLabel_N8i1">LLM Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/service-steps"><span title="Service Steps" class="linkLabel_N8i1">Service Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/ui-steps"><span title="UI Steps" class="linkLabel_N8i1">UI Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/editor-steps"><span title="Editor Steps" class="linkLabel_N8i1">Editor Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/edapi-steps"><span title="EDAPI Steps" class="linkLabel_N8i1">EDAPI Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/browser-steps"><span title="Browser Steps" class="linkLabel_N8i1">Browser Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/youtube-steps"><span title="YouTube Steps" class="linkLabel_N8i1">YouTube Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/step-library/utils-steps"><span title="Utils Steps" class="linkLabel_N8i1">Utils Steps</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/guides/configuration/basics"><span title="Guides" class="categoryLinkLabel_fwTo">Guides</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/configuration/basics"><span title="Configuration" class="categoryLinkLabel_fwTo">Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/howto/debug-flows"><span title="How-To" class="categoryLinkLabel_fwTo">How-To</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/examples/headline-suggestions"><span title="Examples" class="categoryLinkLabel_fwTo">Examples</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/proactions-docs/hub/overview"><span title="ProActions Hub" class="categoryLinkLabel_fwTo">ProActions Hub</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_Ejko"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_HyX0"><div class="docItemContainer_WE4q"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_N_ck" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/proactions-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_dRb0"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Step Library</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Step Library Overview</span></li></ul></nav><div class="tocCollapsible_tO0Z theme-doc-toc-mobile tocMobile_TinA"><button type="button" class="clean-btn tocCollapsibleButton_soVr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Step Library Overview</h1></header>
+<p>ProActions provides a comprehensive library of workflow steps organized into categories. Each step performs a specific function and can be combined to create powerful automation workflows.</p>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="quick-reference">Quick Reference<a href="#quick-reference" class="hash-link" aria-label="Direct link to Quick Reference" title="Direct link to Quick Reference" translate="no">​</a></h2>
+<p>Browse steps by category:</p>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="browser">Browser<a href="#browser" class="hash-link" aria-label="Direct link to Browser" title="Direct link to Browser" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/DOWNLOAD">DOWNLOAD</a></strong> - Downloads a file constructed from text or an existing Blob. The filename is required.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/READ_CLIPBOARD">READ_CLIPBOARD</a></strong> - Reads content from the user clipboard. Prefers HTML content when available, falls back to plain text.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/WRITE_CLIPBOARD">WRITE_CLIPBOARD</a></strong> - Writes text to the user clipboard. Reads the content from the configured input (cfg.text) or from the default text input in the flow context.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="control">Control<a href="#control" class="hash-link" aria-label="Direct link to Control" title="Direct link to Control" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/BREAK">BREAK</a></strong> - Breaks out of the current loop (e.g., WHILE or FOR) based on the given condition.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/CALL_TEMPLATE">CALL_TEMPLATE</a></strong> - Calls a reusable flow by legacy template name (<code>name</code>) or scoped reference (<code>ref</code>).</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/DEBUG">DEBUG</a></strong> - Logs debug information about the current flow context and step configuration. Optionally triggers a debugger breakpoint.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/EMIT_EVENT">EMIT_EVENT</a></strong> - Emits a custom internal event that can trigger other actions subscribed via action events.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/END">END</a></strong> - Ends the execution of a flow based on the given condition, with optional notification.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/FOR">FOR</a></strong> - Executes a set of steps for a fixed number of iterations (numeric) or iterates over an array (items).</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/IF">IF</a></strong> - Execute a conditional branch based on a condition</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/PARALLEL">PARALLEL</a></strong> - Runs multiple step lists in parallel and merges their flow contexts upon completion.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/PLATFORM">PLATFORM</a></strong> - Routes flow execution to platform-specific branches (<code>swing</code>, <code>prime</code>, <code>standalone</code>) with optional <code>default</code> fallback.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SET">SET</a></strong> - Sets variables in the flow context. Can execute steps, evaluate expressions, or set key-value pairs.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SLEEP">SLEEP</a></strong> - Pause execution for a given delay (ms). Useful for pacing flows or waiting for external state changes.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SWITCH">SWITCH</a></strong> - Evaluates a switch value and executes the steps for the matching case. Supports both array and object syntax for cases.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/TRY">TRY</a></strong> - Executes a set of steps in a try block, and if an error occurs, executes catch steps.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/WHILE">WHILE</a></strong> - Repeatedly executes a set of steps while a condition evaluates to true.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="edapi">EDAPI<a href="#edapi" class="hash-link" aria-label="Direct link to EDAPI" title="Direct link to EDAPI" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/EDAPI_OBJECT_CONTENT">EDAPI_OBJECT_CONTENT</a></strong> - Fetch object content from EDAPI and return it as blob or configured outputs. The content id can be provided via cfg.contentId or via a text input.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/UPDATE_BINARY_CONTENT">UPDATE_BINARY_CONTENT</a></strong> - Update binary content of an existing object in EDAPI using the provided blob. Returns updated object metadata.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/UPLOAD">UPLOAD</a></strong> - Upload content to EDAPI by providing a blob or specifying parameters (filename, type). Returns created object metadata.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/UPLOAD_IMAGE">UPLOAD_IMAGE</a></strong> - Upload an image to EDAPI by providing an image object (url or blob). Returns the created object metadata as output.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="editor">Editor<a href="#editor" class="hash-link" aria-label="Direct link to Editor" title="Direct link to Editor" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/CLEAR_SELECTION">CLEAR_SELECTION</a></strong> - Clears the current text selection and optionally repositions the cursor to the start or end of the selection. Available in Swing editor context only.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/CLEAR_TAGS">CLEAR_TAGS</a></strong> - Removes all occurrences of the specified tags from the document or report while preserving their text content. This is useful for cleaning up temporary markup or removing specific tag types.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/CLOSE_DOCUMENT">CLOSE_DOCUMENT</a></strong> - Closes the current document without saving.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/GET_PURE_TEXT">GET_PURE_TEXT</a></strong> - Retrieves the full pure text content from the current document and sets it as output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/GET_TEXT_CONTENT">GET_TEXT_CONTENT</a></strong> - Retrieves text content from the document or a specific location and sets it as output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/GET_XML_CONTENT">GET_XML_CONTENT</a></strong> - Retrieves XML content from the document or a specific location and sets it as output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/GET_ZONES">GET_ZONES</a></strong> - Retrieves zones and their linked documents from a DWP or Report.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/INSERT_LIST">INSERT_LIST</a></strong> - Insert a list of items into the document. The items can be provided as a list input or be generated from a text input (converted to a list using ProcessToList).</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/INSERT_OBJECT">INSERT_OBJECT</a></strong> - Insert object references or templates into the current document using a DTX template.</p>
+</li>
+</ul>
+<p>Prime: Supports paths, UUIDs, and LOIDs (auto-formatted). Options insertionType, full, and templateType are ignored (warnings logged).</p>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/INSERT_TEXT">INSERT_TEXT</a></strong> - Insert text at the given location (cursor, xpath or report). If the step reads text from the flowContext, you can use a preceding SET step to provide the content.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/INSERT_XML">INSERT_XML</a></strong> - Insert XML content at the given location. The content can be provided via the flowContext (using <code>in</code>) or via the default text input.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/REPLACE_TEXT">REPLACE_TEXT</a></strong> - Replace existing text at the given location (cursor paragraph, cursor or xpath) with the provided content. Content can come from a flow variable (using <code>in</code>) or the default text input.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/REPLACE_XML">REPLACE_XML</a></strong> - Replace XML content at the given location. Content can be sourced from a flow variable (<code>in</code>) or the default text input.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SAVE_DOCUMENT">SAVE_DOCUMENT</a></strong> - Saves the current document. Optionally closes the document after saving.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SELECTED_OBJECT">SELECTED_OBJECT</a></strong> - Retrieves information about the currently selected content object and sets it as output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SET_METADATA">SET_METADATA</a></strong> - Set a field value in the object panel using a selector or XPath. Supports tagsinput and plain fields.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/TAG_PURE_TEXT">TAG_PURE_TEXT</a></strong> - Adds tags to pure text content in the document. Tags can highlight or annotate specific text ranges. In Swing, tags can be virtual (temporary) or persistent. In Prime, tags are always persistent.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="llm">LLM<a href="#llm" class="hash-link" aria-label="Direct link to LLM" title="Direct link to LLM" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/AZURE_OPENAI_COMPLETION">AZURE_OPENAI_COMPLETION</a></strong> - Chat/completion step that calls OpenAI (or Hub/Azure variants). Supports messages, images, audio, attachments, tools (functions), structured outputs (json_schema/json_object/list), reasoning and audio output. Many step-level configuration options are supported via cfg.*.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/AZURE_OPENAI_IMAGE_GENERATION">AZURE_OPENAI_IMAGE_GENERATION</a></strong> - ImageGeneration using Azure OpenAI.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/AZURE_OPENAI_SPEECH">AZURE_OPENAI_SPEECH</a></strong> - Azure OpenAI speech step alias.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/AZURE_OPENAI_TRANSCRIPTION">AZURE_OPENAI_TRANSCRIPTION</a></strong> - Azure OpenAI transcription alias (delegates to the OpenAI transcription implementation).</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_COMPLETION">HUB_COMPLETION</a></strong> - Chat/completion step that calls OpenAI (or Hub/Azure variants). Supports messages, images, audio, attachments, tools (functions), structured outputs (json_schema/json_object/list), reasoning and audio output. Many step-level configuration options are supported via cfg.*.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_CONTENT_EXTRACTION">HUB_CONTENT_EXTRACTION</a></strong> - Extract textual content from a URL using the ProActions-Hub extraction tool. The URL can be provided via the default text input or the <code>in</code>/<code>url</code> configuration.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_IMAGE_GENERATION">HUB_IMAGE_GENERATION</a></strong> - ImageGeneration using ProActions Hub.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_SPEECH">HUB_SPEECH</a></strong> - ProActionsHub-compatible speech generation step. Inherits behavior from OPENAI_SPEECH.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_TRANSCRIPTION">HUB_TRANSCRIPTION</a></strong> - Hub-compatible transcription step (delegates to hub service). Writes transcription text and optional segments list.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_ASSISTANT">OPENAI_ASSISTANT</a></strong> - Create or reuse an OpenAI assistant. If cfg.assistantId is provided the assistant will be retrieved; otherwise a new assistant is created. The created or retrieved assistant is written to the flow context.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_COMPLETION">OPENAI_COMPLETION</a></strong> - Chat/completion step that calls OpenAI (or Hub/Azure variants). Supports messages, images, audio, attachments, tools (functions), structured outputs (json_schema/json_object/list), reasoning and audio output. Many step-level configuration options are supported via cfg.*.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_DELETE_THREAD">OPENAI_DELETE_THREAD</a></strong> - Delete a thread using its id. Provide the thread object or id via inputs.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_IMAGE_GENERATION">OPENAI_IMAGE_GENERATION</a></strong> - Generate images using OpenAI image models (DALL·E and GPT-Image-1). Supports model, size, quality, count (n), response_format and other parameters. The generated images are stored in the configured output key or default <code>imageList</code>.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_SPEECH">OPENAI_SPEECH</a></strong> - Generate speech audio using the OpenAI Speech API (or corresponding Hub/Azure variants). Reads text from the default text input and returns an audio blob.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_THREAD">OPENAI_THREAD</a></strong> - Create or reuse an OpenAI thread. If cfg.reuse and cfg.storeIn are provided the thread id may be reused. The created thread is written to the flow context.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_THREAD_FILES">OPENAI_THREAD_FILES</a></strong> - Create a vector store for thread file tools and optionally upload files. Writes created store to flow context and optional uploaded file list to an optional output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_THREAD_MESSAGE">OPENAI_THREAD_MESSAGE</a></strong> - Send a message to a thread/assistant. The assistant and thread inputs are required. The message can be provided via cfg.instruction or via default text input. The assistant response text is stored in the default text output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/OPENAI_TRANSCRIPTION">OPENAI_TRANSCRIPTION</a></strong> - Transcribe audio using OpenAI (or Azure/Hub variants). Reads an audio file/blob from inputs and writes the transcription text and optional segment list.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/STABILITY_AI_OUTPAINT">STABILITY_AI_OUTPAINT</a></strong> - Outpaint an image region using StabilityAI. Supports coordinates (left,right,up,down) to define the outpainting area.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/STABILITY_AI_SEARCH_AND_RECOLOR">STABILITY_AI_SEARCH_AND_RECOLOR</a></strong> - Search and recolor elements in an image using StabilityAI. Provide select_prompt and prompt to find and recolor elements.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/STABILITY_AI_SEARCH_AND_REPLACE">STABILITY_AI_SEARCH_AND_REPLACE</a></strong> - Search and replace regions or objects within an image using StabilityAI. Provide a prompt and a search_prompt to locate and replace visual elements.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/STABILITY_AI_UPSCALE">STABILITY_AI_UPSCALE</a></strong> - Upscale an image using StabilityAI upscale endpoint. Uploads a provided image blob and returns the upscaled image blob.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="service">Service<a href="#service" class="hash-link" aria-label="Direct link to Service" title="Direct link to Service" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/BRIGHTER_AI">BRIGHTER_AI</a></strong> - Upload an image to BrighterAI, poll for processing completion and download the anonymized image. The resulting anonymized image blob is written to the configured output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/DEEPL_TRANSLATE">DEEPL_TRANSLATE</a></strong> - Translate text using DeepL. Supports many optional DeepL parameters and returns the translated text as the default text output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/DEEPL_WRITE">DEEPL_WRITE</a></strong> - Rephrase/write text using DeepL Write endpoint. Returns the rephrased text in the default text output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/ELEVENLABS_STT">ELEVENLABS_STT</a></strong> - Transcribe audio using ElevenLabs STT. Provides the transcribed text and optional JSON result.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/ELEVENLABS_TTS">ELEVENLABS_TTS</a></strong> - Generate speech audio from text using ElevenLabs TTS. Text is taken from the default text input or a flow variable via <code>in</code>.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_MCP_INVOKE">HUB_MCP_INVOKE</a></strong> - Invoke a tool on an MCP server via the Hub.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_MCP_TOOLS">HUB_MCP_TOOLS</a></strong> - List available tools from an MCP server via the Hub.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/REST">REST</a></strong> - Generic REST step. Builds a Request from the given configuration (url, method, headers, parameters, body or formData) and executes it using the host HTTP helper. Results are written to cfg.outputs when provided or to the default text output.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="ui">UI<a href="#ui" class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/CHANGE_VIEW_SIZE">CHANGE_VIEW_SIZE</a></strong> - Requests a change of the view port size. Useful to resize the command palette view in Prime 8.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/FILE_UPLOAD">FILE_UPLOAD</a></strong> - Opens a file upload dialog (modal) and stores selected file(s) into the flow context. Supports output mapping via the <code>outputs</code> config or default file output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/FORM">FORM</a></strong> - Displays a configurable form to the user (via FormBuilder). The form definition is provided in <code>cfg.form</code>. When submitted, the returned values are merged into the flowContext.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HIDE_PROGRESS">HIDE_PROGRESS</a></strong> - Hide any shown progress bar.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/IMAGE_PICKER">IMAGE_PICKER</a></strong> - Shows an image picker modal allowing the user to pick one image from a provided list of image objects ({ url, previewUrl?, label? }). The selected image object is stored as an output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_CHOICE">MONITOR_CHOICE</a></strong> - Display a selection of choices in the Flow Monitor. Pauses workflow until user selects.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_CONFIRM">MONITOR_CONFIRM</a></strong> - Display a confirmation dialog in the Flow Monitor. Pauses workflow until user responds.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_INPUT">MONITOR_INPUT</a></strong> - Display an inline text input field in the Flow Monitor.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_JSON">MONITOR_JSON</a></strong> - Display JSON structured data in the Flow Monitor.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_KEYVALUE">MONITOR_KEYVALUE</a></strong> - Display key-value structured data in the Flow Monitor.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_METRICS">MONITOR_METRICS</a></strong> - Display metrics in the Flow Monitor.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_STATUS">MONITOR_STATUS</a></strong> - Display status messages in the Flow Monitor during workflow execution.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MONITOR_TABLE">MONITOR_TABLE</a></strong> - Display tabular structured data in the Flow Monitor.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/PLAY_AUDIO">PLAY_AUDIO</a></strong> - Plays audio in a lightweight floating player. Audio source can be provided as a data URL, http(s) URL, or raw base64 via <code>cfg.in</code> or via the default text input. The step mounts a closed Shadow DOM audio player and resolves when the player is closed by the user.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/PROMPT">PROMPT</a></strong> - Shows a simple prompt to the user and stores the entered text into the default text output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SHOW_NOTIFICATION">SHOW_NOTIFICATION</a></strong> - Shows a notification to the user with optional title and resolved message.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SHOW_PROGRESS">SHOW_PROGRESS</a></strong> - Show a progress bar with optional status text. Use <code>position</code> to place it and <code>autoHide</code> to auto-hide after completion.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SHOW_RESPONSE">SHOW_RESPONSE</a></strong> - Shows a response to the user in a modal. Can run inline steps before showing and supports HTML and Markdown modes.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/UPDATE_PROGRESS">UPDATE_PROGRESS</a></strong> - Update an existing progress bar. Provide percentage (0-100) and optional status text.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/USER_SELECT">USER_SELECT</a></strong> - Displays a selection modal allowing the user to pick one item from a list. The list may be provided directly or produced by a pre-processing step (inlineSteps). The selected value is written to the default text output.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="utils">Utils<a href="#utils" class="hash-link" aria-label="Direct link to Utils" title="Direct link to Utils" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/BASE64_TO_BLOB">BASE64_TO_BLOB</a></strong> - Converts a base64-encoded string to a Blob and stores it in the flow context as a blob output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/MARKDOWN_TO_HTML">MARKDOWN_TO_HTML</a></strong> - Converts markdown text to HTML and sets it as text output.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/PARSE_JSON">PARSE_JSON</a></strong> - Parses JSON content from the text input and stores the resulting object in the flow context.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SANITIZE">SANITIZE</a></strong> - Sanitizes text input. Can strip markdown code blocks, normalize Unicode characters (quotes, dashes, spaces), and validate/repair XML content before forwarding the result to the flow context.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/SCRIPTING">SCRIPTING</a></strong> - Executes inline JavaScript (<code>script</code>) or a JS-style template (<code>template</code>). Use with caution — only in trusted flows.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/TO_LIST">TO_LIST</a></strong> - Convert a textual AI response into a list of strings. Detects JSON arrays, ordered/unordered lists, comma-separated values, or falls back to a single-item array.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="youtube">YouTube<a href="#youtube" class="hash-link" aria-label="Direct link to YouTube" title="Direct link to YouTube" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_YOUTUBE_AUTH_INIT">HUB_YOUTUBE_AUTH_INIT</a></strong> - Initiate OAuth authorization flow for YouTube (requires ProActions-Hub). Opens the auth URL when available unless cfg.omitOpenAuth is true.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_YOUTUBE_AUTH_LOGOUT">HUB_YOUTUBE_AUTH_LOGOUT</a></strong> - Log out the configured Hub YouTube account. Uses POST to logout and returns the resulting object.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_YOUTUBE_AUTH_STATUS">HUB_YOUTUBE_AUTH_STATUS</a></strong> - Check the status of a previously initiated YouTube OAuth authorization flow.</p>
+</li>
+<li class="">
+<p><strong><a class="" href="/proactions-docs/step-library/steps/HUB_YOUTUBE_UPLOAD">HUB_YOUTUBE_UPLOAD</a></strong> - Upload a video to YouTube via the Hub service. Supports video file, optional thumbnail, metadata fields (title, description, privacyStatus, categoryId), tags and additionalMetadata. Progress can be shown when cfg.updateProgress is true.</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="using-steps">Using Steps<a href="#using-steps" class="hash-link" aria-label="Direct link to Using Steps" title="Direct link to Using Steps" translate="no">​</a></h2>
+<p>Steps are defined in YAML configuration files and executed as part of flows. Each step has:</p>
+<ul>
+<li class=""><strong>Name</strong>: The step identifier (e.g., <code>HUB_COMPLETION</code>, <code>REPLACE_TEXT</code>)</li>
+<li class=""><strong>Configuration options</strong>: Parameters that control the step&#x27;s behavior</li>
+<li class=""><strong>Inputs</strong>: Data the step reads from the flow context</li>
+<li class=""><strong>Outputs</strong>: Data the step writes to the flow context</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="basic-example">Basic Example<a href="#basic-example" class="hash-link" aria-label="Direct link to Basic Example" title="Direct link to Basic Example" translate="no">​</a></h3>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">behavior</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;You are a helpful assistant&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;Summarize this: {textContent}&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">outputs</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> text</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> summary</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="common-patterns">Common Patterns<a href="#common-patterns" class="hash-link" aria-label="Direct link to Common Patterns" title="Direct link to Common Patterns" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Control Flow</strong>: Use IF, FOR, WHILE steps to control execution</li>
+<li class=""><strong>Service Integration</strong>: Call external APIs and AI services</li>
+<li class=""><strong>Data Processing</strong>: Transform and manipulate data</li>
+<li class=""><strong>User Interaction</strong>: Prompt users and display results</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="step-categories">Step Categories<a href="#step-categories" class="hash-link" aria-label="Direct link to Step Categories" title="Direct link to Step Categories" translate="no">​</a></h2>
+<p>Click on a category to see all available steps:</p>
+<ul>
+<li class=""><a class="" href="/proactions-docs/step-library/control-steps">Control Flow</a> - Conditional logic, loops, error handling</li>
+<li class=""><a class="" href="/proactions-docs/step-library/llm-steps">LLM Services</a> - AI completion, transcription, image generation</li>
+<li class=""><a class="" href="/proactions-docs/step-library/service-steps">Service Integration</a> - External service integrations</li>
+<li class=""><a class="" href="/proactions-docs/step-library/ui-steps">UI Components</a> - Forms, prompts, notifications, menus</li>
+<li class=""><a class="" href="/proactions-docs/step-library/editor-steps">Editor Operations</a> - Text manipulation, content insertion</li>
+<li class=""><a class="" href="/proactions-docs/step-library/edapi-steps">EDAPI</a> - Méthode object operations</li>
+<li class=""><a class="" href="/proactions-docs/step-library/browser-steps">Browser Functions</a> - Clipboard, downloads</li>
+<li class=""><a class="" href="/proactions-docs/step-library/youtube-steps">YouTube Integration</a> - YouTube API operations</li>
+<li class=""><a class="" href="/proactions-docs/step-library/utils-steps">Utilities</a> - Helper functions and utilities</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="finding-the-right-step">Finding the Right Step<a href="#finding-the-right-step" class="hash-link" aria-label="Direct link to Finding the Right Step" title="Direct link to Finding the Right Step" translate="no">​</a></h2>
+<p><strong>Need to...?</strong></p>
+<ul>
+<li class=""><strong>Make decisions?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/IF">IF</a> or <a class="" href="/proactions-docs/step-library/steps/SWITCH">SWITCH</a></li>
+<li class=""><strong>Loop over items?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/FOR">FOR</a> or <a class="" href="/proactions-docs/step-library/steps/WHILE">WHILE</a></li>
+<li class=""><strong>Call an AI service?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/HUB_COMPLETION">HUB_COMPLETION</a></li>
+<li class=""><strong>Get user input?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/FORM">FORM</a></li>
+<li class=""><strong>Transform data?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/SCRIPTING">SCRIPTING</a></li>
+<li class=""><strong>Handle errors?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/TRY">TRY</a></li>
+<li class=""><strong>Show results?</strong> → Use <a class="" href="/proactions-docs/step-library/steps/SHOW_RESPONSE">SHOW_RESPONSE</a> or <a class="" href="/proactions-docs/step-library/steps/SHOW_NOTIFICATION">SHOW_NOTIFICATION</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="version-information">Version Information<a href="#version-information" class="hash-link" aria-label="Direct link to Version Information" title="Direct link to Version Information" translate="no">​</a></h2>
+<p>This documentation is automatically generated from the ProActions source code and represents the current available steps in your installation.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/proactions-docs/getting-started/using-services"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Using Services</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/proactions-docs/step-library/control-steps"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Control Steps</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_P0JP thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#quick-reference" class="table-of-contents__link toc-highlight">Quick Reference</a><ul><li><a href="#browser" class="table-of-contents__link toc-highlight">Browser</a></li><li><a href="#control" class="table-of-contents__link toc-highlight">Control</a></li><li><a href="#edapi" class="table-of-contents__link toc-highlight">EDAPI</a></li><li><a href="#editor" class="table-of-contents__link toc-highlight">Editor</a></li><li><a href="#llm" class="table-of-contents__link toc-highlight">LLM</a></li><li><a href="#service" class="table-of-contents__link toc-highlight">Service</a></li><li><a href="#ui" class="table-of-contents__link toc-highlight">UI</a></li><li><a href="#utils" class="table-of-contents__link toc-highlight">Utils</a></li><li><a href="#youtube" class="table-of-contents__link toc-highlight">YouTube</a></li></ul></li><li><a href="#using-steps" class="table-of-contents__link toc-highlight">Using Steps</a><ul><li><a href="#basic-example" class="table-of-contents__link toc-highlight">Basic Example</a></li><li><a href="#common-patterns" class="table-of-contents__link toc-highlight">Common Patterns</a></li></ul></li><li><a href="#step-categories" class="table-of-contents__link toc-highlight">Step Categories</a></li><li><a href="#finding-the-right-step" class="table-of-contents__link toc-highlight">Finding the Right Step</a></li><li><a href="#version-information" class="table-of-contents__link toc-highlight">Version Information</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Eidosmedia. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

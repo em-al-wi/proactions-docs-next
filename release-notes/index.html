@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-release-notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Release Notes | ProActions Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://em-al-wi.github.io/proactions-docs/release-notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Release Notes | ProActions Documentation"><meta data-rh="true" name="description" content="All notable changes to ProActions are documented in this file."><meta data-rh="true" property="og:description" content="All notable changes to ProActions are documented in this file."><link data-rh="true" rel="icon" href="/proactions-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://em-al-wi.github.io/proactions-docs/release-notes"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/release-notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/release-notes" hreflang="x-default"><link rel="stylesheet" href="/proactions-docs/assets/css/styles.85e57e58.css">
+<script src="/proactions-docs/assets/js/runtime~main.ae25cf5f.js" defer="defer"></script>
+<script src="/proactions-docs/assets/js/main.71e5748b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_HLd7" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proactions-docs/"><b class="navbar__title text--truncate">ProActions</b></a><a class="navbar__item navbar__link" href="/proactions-docs/intro">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proactions-docs/release-notes">Release Notes</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_k5YO colorModeToggle_kzyk"><button class="clean-btn toggleButton_iYsp toggleButtonDisabled_V_0o" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o lightToggleIcon_Z_lD"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o darkToggleIcon_EApx"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o systemToggleIcon_ewKK"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_dFOU"><div class="navbar__search searchBarContainer__EhK" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_LnXF" value=""><div class="loadingRing__4YV searchBarLoadingRing_yZZB"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_zgir"><div class="docsWrapper_j6Sj"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_qpav" type="button"></button><div class="docRoot_qRRu"><main class="docMainContainer_Ejko docMainContainerEnhanced_BovK"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_HyX0"><div class="docItemContainer_WE4q"><article><div class="tocCollapsible_tO0Z theme-doc-toc-mobile tocMobile_TinA"><button type="button" class="clean-btn tocCollapsibleButton_soVr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Release Notes</h1></header>
+<p>All notable changes to ProActions are documented in this file.</p>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="recent-highlights">Recent Highlights<a href="#recent-highlights" class="hash-link" aria-label="Direct link to Recent Highlights" title="Direct link to Recent Highlights" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="whats-new-in-120-upcoming">What&#x27;s New in 1.2.0 (upcoming)<a href="#whats-new-in-120-upcoming" class="hash-link" aria-label="Direct link to What&#x27;s New in 1.2.0 (upcoming)" title="Direct link to What&#x27;s New in 1.2.0 (upcoming)" translate="no">​</a></h3>
+<ul>
+<li class="">📊 <strong>Flow Monitor</strong> - Real-time visualization and control of running workflows</li>
+<li class="">⏱️ <strong>Progress Tracking</strong> - Percentage, step-based, and indeterminate progress indicators</li>
+<li class="">🛑 <strong>Cancellation Support</strong> - Stop long-running flows with confirmation dialogs</li>
+<li class="">💬 <strong>Interactive Feedback</strong> - Prompts and actions within the monitor</li>
+<li class="">🔄 <strong>Streaming Content</strong> - Real-time LLM response display</li>
+<li class="">🎨 <strong>Smart Auto-Hide</strong> - Intelligent visibility based on execution state</li>
+<li class="">📄 <strong>Document Lifecycle Steps</strong> - New <code>SAVE_DOCUMENT</code> and <code>CLOSE_DOCUMENT</code> steps with cross-platform support in Swing and Prime</li>
+<li class="">⚡ <strong>Event-Driven Actions</strong> - New internal event system with action subscriptions and <code>EMIT_EVENT</code> / <code>DISPATCH_EVENT</code> for trigger-based automation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="whats-new-in-110-latest">What&#x27;s New in 1.1.0 (latest)<a href="#whats-new-in-110-latest" class="hash-link" aria-label="Direct link to What&#x27;s New in 1.1.0 (latest)" title="Direct link to What&#x27;s New in 1.1.0 (latest)" translate="no">​</a></h3>
+<ul>
+<li class="">🎨 <strong>Interactive Diff</strong> - Review and selectively accept/reject text changes with granular control</li>
+<li class="">⚡ <strong>Inline Steps</strong> - Improved UX with background processing for FORM, USER_SELECT, and SHOW_RESPONSE</li>
+<li class="">🔧 <strong>Swing Integrations</strong> - Native Swing toolbar, object action, and context menu support</li>
+<li class="">🤖 <strong>Enhanced Chat Completion</strong> - Tool calling and improved multimodal support</li>
+<li class="">🔄 <strong>New Control Steps</strong> - BREAK, FOR, TRY, and PARALLEL for advanced workflow logic</li>
+<li class="">🎵 <strong>Audio Playback</strong> - New PLAY_AUDIO step with customizable player</li>
+<li class="">📚 <strong>Prompt Library</strong> - Reuse stored prompts from Swing Prompt Management UI</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="major-features-since-100">Major Features Since 1.0.0<a href="#major-features-since-100" class="hash-link" aria-label="Direct link to Major Features Since 1.0.0" title="Direct link to Major Features Since 1.0.0" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Flow Monitor</strong> (1.2.0) - Real-time workflow visualization and control</li>
+<li class=""><strong>Interactive Diff</strong> (1.1.0) - Granular change review and selection</li>
+<li class=""><strong>Swing Integration</strong> (1.1.0) - Native inline toolbar and action integration</li>
+<li class=""><strong>Schema Support</strong> (1.0.11) - Auto-completion and validation for YAML configs</li>
+<li class=""><strong>Form Enhancements</strong> (1.0.10) - Rich form components (HTML, Markdown, Diff)</li>
+<li class=""><strong>Progress Bars</strong> (1.0.8) - Visual feedback for long-running workflows</li>
+<li class=""><strong>Context Menus</strong> (1.0.7) - Text selection and one-click menus</li>
+<li class=""><strong>ProActions Hub</strong> - Centralized API key management for 40+ AI providers</li>
+<li class=""><strong>Multi-Language Support</strong> - English, Spanish, French, Italian, German</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="version-history">Version History<a href="#version-history" class="hash-link" aria-label="Direct link to Version History" title="Direct link to Version History" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="#120---february-2026" class="">1.2.0 - February, 2026</a> - Flow Monitor, Progress Tracking, Interactive Feedback</li>
+<li class=""><a href="#110---october-24-2025" class="">1.1.0 - October 24, 2025</a> - Interactive Diff, Swing Integration, Enhanced Workflows</li>
+<li class=""><a href="#1012---february-7-2025" class="">1.0.12 - February 7, 2025</a> - Slash Menu, ElevenLabs, Prime 8</li>
+<li class=""><a href="#1011---april-28-2025" class="">1.0.11 - April 28, 2025</a> - Schema Support, YouTube Integration</li>
+<li class=""><a href="#1010---february-27-2025" class="">1.0.10 - February 27, 2025</a> - Form Enhancements, Spanish Language</li>
+<li class=""><a href="#109---january-26-2025" class="">1.0.9 - January 26, 2025</a> - DeepL Write Integration</li>
+<li class=""><a href="#108---december-13-2024" class="">1.0.8 - December 13, 2024</a> - Progress Bars, Dashboard Actions</li>
+<li class=""><a href="#107---november-14-2024" class="">1.0.7 - November 14, 2024</a> - Context Menus, External Config</li>
+<li class=""><a href="#106---october-11-2024" class="">1.0.6 - October 11, 2024</a> - Permissions, DEBUG Step</li>
+<li class=""><a href="#105---september-3-2024" class="">1.0.5 - September 3, 2024</a> - Enhanced Metadata Access</li>
+<li class=""><a href="#104---august-15-2024" class="">1.0.4 - August 15, 2024</a> - Performance Improvements</li>
+<li class=""><a href="#103---august-14-2024" class="">1.0.3 - August 14, 2024</a> - Stability AI Integration</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="detailed-release-notes">Detailed Release Notes<a href="#detailed-release-notes" class="hash-link" aria-label="Direct link to Detailed Release Notes" title="Direct link to Detailed Release Notes" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="120---february-2026">1.2.0 - February 2026<a href="#120---february-2026" class="hash-link" aria-label="Direct link to 1.2.0 - February 2026" title="Direct link to 1.2.0 - February 2026" translate="no">​</a></h3>
+<p><strong>📊 Flow Monitor</strong></p>
+<p>A comprehensive monitoring system that provides real-time visualization and control of running ProActions workflows:</p>
+<ul>
+<li class=""><strong>Real-time Visualization</strong>: Monitor displays live progress, current step, and elapsed time for all running flows</li>
+<li class=""><strong>Progress Tracking</strong>: Multiple progress types supported:<!-- -->
+<ul>
+<li class="">Percentage-based (0-100%)</li>
+<li class="">Step-based (&quot;3 of 10 steps&quot;)</li>
+<li class="">Indeterminate (spinner for unknown duration)</li>
+</ul>
+</li>
+<li class=""><strong>Cancellation Support</strong>: Users can cancel long-running flows with optional confirmation dialogs</li>
+<li class=""><strong>Interactive Feedback</strong>: Display prompts, confirmations, and actions directly in the monitor</li>
+<li class=""><strong>Streaming Content</strong>: Real-time display of LLM streaming responses as they arrive</li>
+<li class=""><strong>Smart Auto-Hide</strong>: Intelligent hiding based on execution state:<!-- -->
+<ul>
+<li class="">Never hides on errors (user must acknowledge)</li>
+<li class="">Never hides with pending interactive prompts</li>
+<li class="">Never hides during streaming</li>
+<li class="">Respects user hover and manual close intent</li>
+</ul>
+</li>
+<li class=""><strong>Customization</strong>: Full control over position, theme, visibility, and behavior</li>
+<li class=""><strong>Permissions</strong>: User/group/team-based access control</li>
+<li class=""><strong>Multi-App Support</strong>: Works seamlessly in both Swing and Prime applications</li>
+</ul>
+<p><strong>Configuration:</strong></p>
+<p>Global configuration:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">AI_KIT</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">MONITOR</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">enabled</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Enable monitor globally</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> bottom</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">right </span><span class="token comment" style="color:#999988;font-style:italic"># Position on screen</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">theme</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> dark </span><span class="token comment" style="color:#999988;font-style:italic"># Visual theme (dark/light)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">autoHide</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Auto-hide when flows complete</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">autoHideDelay</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3000</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Delay before hiding (ms)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">maxVisible</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">5</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Max concurrent executions shown</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">apps</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Which apps to show monitor in</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> all </span><span class="token comment" style="color:#999988;font-style:italic"># Options: swing, prime, all</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">showProgress</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Show progress bars</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">showStepNames</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Show current step name</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">showElapsedTime</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Show elapsed time</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">enableCancellation</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Allow cancelling flows</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">confirmCancellation</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Confirm before cancelling</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">renderMarkdown</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Render markdown in feedback</span><br></span></code></pre></div></div>
+<p>Action-level override:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Long Running Task&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">monitor</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">enabled</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">showProgress</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">confirmCancellation</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">flow</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Generate comprehensive report...&#x27;</span><br></span></code></pre></div></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li class=""><strong>Long-running workflows</strong>: Provide visibility into multi-step LLM operations</li>
+<li class=""><strong>Batch processing</strong>: Track progress through large datasets</li>
+<li class=""><strong>Interactive flows</strong>: Handle user prompts without interrupting execution</li>
+<li class=""><strong>Debugging</strong>: Understand workflow execution and identify bottlenecks</li>
+<li class=""><strong>User training</strong>: Demonstrate what ProActions is doing in real-time</li>
+</ul>
+<p>See the <a class="" href="/proactions-docs/guides/configuration/flow-monitor">Flow Monitor Guide</a> for complete documentation.</p>
+<p><strong>⚡ Event-Driven Action Triggers</strong></p>
+<ul>
+<li class="">Actions can subscribe to internal events using <code>events</code> in action configuration.</li>
+<li class="">New <code>EMIT_EVENT</code> (<code>DISPATCH_EVENT</code>) step emits custom events for automation chains.</li>
+<li class="">Trigger policies support <code>skip</code>, <code>queue</code>, and <code>parallel</code> behavior while an action is running.</li>
+<li class="">Supported event sources: <code>aikit</code>, <code>system</code>, <code>custom</code>.</li>
+</ul>
+<p><strong>⚠️ BREAKING CHANGE: Client adapter data APIs are now async</strong></p>
+<p>To remove blocking synchronous HTTP requests (Prime), the following <code>client</code> methods now need to be executed asynchronously:</p>
+<ul>
+<li class=""><code>getBasefolder(storyId, type)</code></li>
+<li class=""><code>getUserData(name)</code></li>
+<li class=""><code>setUserData(name, data)</code></li>
+</ul>
+<p>If you use these methods in <code>SCRIPTING</code>, migrate to async mode and <code>await</code>:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SCRIPTING</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">mode</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> async</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">script</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">|</span><span class="token scalar string" style="color:#e3116c"></span><br></span><span class="token-line" style="color:#393A34"><span class="token scalar string" style="color:#e3116c">    const prompts = await client.getUserData(&#x27;prompts&#x27;);</span><br></span><span class="token-line" style="color:#393A34"><span class="token scalar string" style="color:#e3116c">    prompts.push({ id: &#x27;new&#x27;, text: &#x27;example&#x27; });</span><br></span><span class="token-line" style="color:#393A34"><span class="token scalar string" style="color:#e3116c">    await client.setUserData(&#x27;prompts&#x27;, prompts);</span><br></span><span class="token-line" style="color:#393A34"><span class="token scalar string" style="color:#e3116c">    flowContext.baseFolder = await client.getBasefolder(client.getDocumentId(), &#x27;image&#x27;);</span><br></span><span class="token-line" style="color:#393A34"><span class="token scalar string" style="color:#e3116c">    return flowContext;</span><br></span></code></pre></div></div>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="110---october-24-2025">1.1.0 - October 24 2025<a href="#110---october-24-2025" class="hash-link" aria-label="Direct link to 1.1.0 - October 24 2025" title="Direct link to 1.1.0 - October 24 2025" translate="no">​</a></h3>
+<p><strong>🎨 Interactive Diff Component</strong></p>
+<p>A powerful new form component that allows users to review and selectively accept or reject text changes:</p>
+<ul>
+<li class=""><strong>Interactive Mode</strong>: Click checkboxes and toggles to include/exclude specific changes<!-- -->
+<ul>
+<li class="">Additions: Include or exclude new content</li>
+<li class="">Deletions: Apply or keep original text</li>
+<li class="">Replacements: Choose between previous or new text</li>
+</ul>
+</li>
+<li class=""><strong>Toolbar Controls</strong>:</li>
+<li class="">
+<ul>
+<li class="">Zoom in/out for better readability</li>
+<li class="">Accept All / Reject All buttons for bulk operations</li>
+<li class="">Customizable button symbols and positioning</li>
+</ul>
+</li>
+<li class=""><strong>Real-time Updates</strong>: Result text recalculates as selections change</li>
+</ul>
+<p>Example usage:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> FORM</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">form</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">diffField</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;diff&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">mode</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;words&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">prevText</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.original }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">text</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.improved }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">interactive</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">showDeletions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">diffControls</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;top&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">zoom</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">acceptRejectAll</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+<p>Perfect for AI text improvement workflows, translation review, and grammar correction tools.</p>
+<p><strong>⚡ Inline Steps Feature</strong></p>
+<p>Improved user experience for UI steps with background processing:</p>
+<ul>
+<li class=""><strong>FORM</strong>, <strong>USER_SELECT</strong>, and <strong>SHOW_RESPONSE</strong> now support <code>inlineSteps</code></li>
+<li class="">Modal displays immediately with loading indicator</li>
+<li class="">Background steps execute while modal is visible</li>
+<li class="">Results seamlessly populate the UI when processing completes</li>
+<li class="">Customizable loading messages via <code>loadingText</code> configuration</li>
+<li class="">Error handling displays errors in-place within the modal</li>
+</ul>
+<p>Example usage:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> USER_SELECT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">inlineSteps</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Generate 6 creative headlines for: {textContent}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">response_format</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;list&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">promptText</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Select a headline&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">enableKeyboardControl</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+<p>This eliminates perceived wait time for long-running LLM calls and provides immediate user feedback.</p>
+<p><strong>🔧 Swing Integration System</strong></p>
+<p>Native integration with Swing Web Client UI components:</p>
+<ul>
+<li class="">
+<p><strong>inlineMenu</strong>: Add buttons to the inline editor toolbar</p>
+<ul>
+<li class="">Appears when editing content in report, story, or DWP contexts and selecting text.</li>
+<li class="">Supports conditional visibility and enablement via expressions</li>
+<li class="">Configuration: <code>label</code>, <code>icon</code>, <code>allowReadOnly</code>, <code>isEnabled</code>, <code>isActive</code></li>
+</ul>
+</li>
+<li class="">
+<p><strong>objectAction</strong>: Add actions to the object three dots menu (e.g. in search results or preview)</p>
+<ul>
+<li class="">Works across a lot of contexts</li>
+</ul>
+</li>
+<li class="">
+<p><strong>contextMenu</strong>: Add items to right-click context menus</p>
+<ul>
+<li class="">Appears in Explorer and other contexts</li>
+<li class="">Same configuration options as objectAction</li>
+</ul>
+</li>
+</ul>
+<p>Example configuration:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Shorten Selection&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">swing</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">inlineMenu</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">enable</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">icon</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;fa fa-compress&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">label</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Shorten&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">allowReadOnly</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">isEnabled</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;{{ ctx.activeDocument.getSelection().getNode().elementName == &#x27;p&#x27; }}&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">flow</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Shorten this text: {selectedText}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> REPLACE_TEXT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">at</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> CURSOR</span><br></span></code></pre></div></div>
+<p><strong>⚠️ BREAKING CHANGE: New Deployment Structure</strong></p>
+<p>ProActions now uses a <strong>single unified bundle</strong> for deployment. The old multi-file structure is no longer supported:</p>
+<p><strong>Old Structure (v1.0.x):</strong></p>
+<div class="language-text codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-text codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token plain">~/methode-servlets/conf/swing/com.eidosmedia.swing.web-app/app/plugins/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── pro-actions-core/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── pro-actions-bundle.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── pro-actions-command.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── pro-actions-config.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── pro-actions-ext-ai-kit/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    └── proactions-ai-kit.js</span><br></span></code></pre></div></div>
+<p><strong>New Structure (v1.1.0+):</strong></p>
+<div class="language-text codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-text codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token plain">~/methode-servlets/conf/swing/com.eidosmedia.swing.web-app/app/plugins/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── pro-actions/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ├── pro-actions-{version}.js    (single bundle file)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    └── pro-actions-config.js       (configuration file)</span><br></span></code></pre></div></div>
+<p><strong>Migration Steps:</strong></p>
+<ol>
+<li class="">
+<p><strong>Backup configuration</strong>:</p>
+<ul>
+<li class="">Save a copy of <code>plugins/pro-actions-core/pro-actions-config.js</code></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Remove old files</strong>:</p>
+<ul>
+<li class="">Delete <code>plugins/pro-actions-core/</code> directory</li>
+<li class="">Delete <code>plugins/pro-actions-ext-ai-kit/</code> directory</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Install new bundle</strong>:</p>
+<ul>
+<li class="">Create <code>plugins/pro-actions/</code> directory</li>
+<li class="">Copy <code>pro-actions-{version}.js</code> from the release package</li>
+<li class="">Copy your backed-up <code>pro-actions-config.js</code> to <code>plugins/pro-actions/</code></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Verify configuration</strong>:</p>
+<ul>
+<li class="">Review <code>pro-actions-config.js</code> for any path references (usually none needed)</li>
+<li class="">Restart your Swing client to load the new bundle</li>
+</ul>
+</li>
+</ol>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li class="">Simplified deployment with single bundle file</li>
+<li class="">Reduced complexity in installation process</li>
+<li class="">Easier version management and updates</li>
+<li class="">Consistent file structure across installations</li>
+</ul>
+<p><strong>⚠️ TEXT_MENU Deprecation</strong></p>
+<p>The TEXT_MENU component is now <strong>deprecated</strong> in favor of Swing&#x27;s native <code>inlineMenu</code> integration:</p>
+<ul>
+<li class="">Using TEXT_MENU in recent Swing versions will show both the inline toolbar and TEXT_MENU</li>
+<li class="">The two components are not compatible and create a poor user experience</li>
+<li class=""><strong>Action Required</strong>: Migrate your TEXT_MENU configurations to use <code>swing.inlineMenu</code></li>
+<li class="">TEXT_MENU will be removed in a future version</li>
+</ul>
+<p>Migration example:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># OLD - Deprecated</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">TEXT_MENU</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">story</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">items</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;button&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">icon</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;fa fa-icon&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;My Action&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">flowRef</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;My Action&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic"># ...</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># NEW - Recommended</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;My Action&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">swing</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">inlineMenu</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">enable</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">icon</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;fa fa-icon&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">label</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;My Action&#x27;</span><br></span></code></pre></div></div>
+<p><strong>🤖 Enhanced Chat Completion Steps</strong></p>
+<p>Significant improvements to all chat completion steps (OPENAI_COMPLETION, HUB_COMPLETION, etc.):</p>
+<ul>
+<li class="">
+<p><strong>Tool/Function Calling</strong>:</p>
+<ul>
+<li class="">Define custom functions that the LLM can invoke during conversation</li>
+<li class="">Functions can execute ProActions workflow steps, scripts, or templates</li>
+<li class="">Support for required and optional parameters</li>
+<li class="">Multi-turn conversations with tool results</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> OPENAI_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Ask the user a question using the tool askUser&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">functions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> askUser</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Ask the user a question&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">required_params</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token string" style="color:#e3116c">&#x27;question&#x27;</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">steps</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> USER_PROMPT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          </span><span class="token key atrule" style="color:#00a4db">promptText</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.question }}&#x27;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Binary Input/Output Support</strong>:</p>
+<ul>
+<li class="">Audio input support for speech-capable models</li>
+<li class="">Audio output support with automatic playback</li>
+<li class="">Image input improvements with better multimodal handling</li>
+<li class="">Base64 and blob handling for all media types</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Structured Outputs</strong>:</p>
+<ul>
+<li class="">Enhanced <code>response_format</code> with <code>json_object</code> option.</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Configuration Improvements</strong>:</p>
+<ul>
+<li class="">Support for conversation history via <code>messages</code> array</li>
+</ul>
+</li>
+</ul>
+<p><strong>📚 Prompt Library Integration</strong></p>
+<p>Reuse and centrally manage prompts:</p>
+<ul>
+<li class="">Reference stored prompts using <code>promptId</code> configuration</li>
+<li class="">Prompts managed in Swing Prompt Management UI</li>
+<li class="">Supports both system and user prompts</li>
+<li class="">Variable resolution works within stored prompts</li>
+<li class="">Reduces duplication and improves governance</li>
+</ul>
+<p>Example:</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> OPENAI_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">promptId</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;d112a306-8f7a-43bc-8f38-94161b6a91cd&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic"># All other configurations remain available</span><br></span></code></pre></div></div>
+<p><strong>🔄 New Control Flow Steps</strong></p>
+<p>Advanced workflow control capabilities:</p>
+<ul>
+<li class="">
+<p><strong>BREAK</strong>: Exit loops conditionally</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> WHILE</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">condition</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.counter &lt; 10 }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">do</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SET</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">counter</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.counter + 1 }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> BREAK</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">condition</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.counter == 5 }}&#x27;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>FOR</strong>: Numeric and array iteration</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Numeric iteration</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> FOR</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">var</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;i&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">start</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">end</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">5</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">do</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SET</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">item</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.i }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Array iteration</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> FOR</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">var</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;item&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">items</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.myList }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">do</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SET</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">current</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.item }}&#x27;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>TRY</strong>: Error handling with catch blocks</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> TRY</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">try</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SET</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">value</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ riskyOperation }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">catch</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> SET</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">error</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.error }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">fallbackValue</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;default&#x27;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>PARALLEL</strong>: Execute multiple step sequences concurrently</p>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> PARALLEL</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">steps</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Branch 1</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Generate headline&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Branch 2</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Generate summary&#x27;</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>🎵 New Steps</strong></p>
+<ul>
+<li class="">
+<p><strong>PLAY_AUDIO</strong>: Display a customizable floating audio player</p>
+<ul>
+<li class="">Supports data URLs, HTTP URLs, and base64 audio</li>
+<li class="">Configurable theme (dark/light or custom colors)</li>
+<li class="">Position control (9 anchor positions)</li>
+<li class="">Progress bar, volume controls, and time display</li>
+<li class="">Autoplay support with browser compatibility fallbacks</li>
+<li class="">Draggable player with Shadow DOM isolation</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> PLAY_AUDIO</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">in</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.audioDataUrl }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">autoplay</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">theme</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;dark&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;bottom-right&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">showProgress</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">showVolume</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>BASE64_TO_BLOB</strong>: Convert base64 strings to blobs</p>
+<ul>
+<li class="">Essential for handling binary data in workflows</li>
+<li class="">Supports custom MIME types</li>
+<li class="">Integrates with other steps requiring blob inputs</li>
+</ul>
+</li>
+</ul>
+<p><strong>📝 FORM Enhancements</strong></p>
+<ul>
+<li class="">
+<p><strong>formConfig</strong>: New configuration object for FORM step behavior</p>
+<ul>
+<li class="">Control modal sizing and appearance (width, height, dialogSize)</li>
+<li class="">Fullscreen mode support</li>
+<li class="">Typography customization (fonts, line heights)</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> FORM</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Large Review Form&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">formConfig</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">dialogSize</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;xl&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">height</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;80vh&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">diffFontSize</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;14px&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">form</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">reviewField</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;diff&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">mode</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;words&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">prevText</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.original }}&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">text</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;{{ flowContext.improved }}&#x27;</span><br></span></code></pre></div></div>
+<p>See <a class="" href="/proactions-docs/guides/configuration/forms-and-inputs#modal-configuration">Forms and Inputs Guide</a> for complete formConfig options.</p>
+</li>
+<li class="">
+<p><strong>Textarea Resize</strong>: Enhanced textarea component</p>
+<ul>
+<li class=""><code>rows</code> configuration for initial height</li>
+<li class=""><code>resize</code> option: <code>none</code>, <code>vertical</code>, <code>horizontal</code>, <code>both</code></li>
+<li class="">Better control over form layout</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> FORM</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">form</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">notes</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;textarea&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">rows</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">resize</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;vertical&#x27;</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>🎯 USER_SELECT Keyboard Control</strong></p>
+<ul>
+<li class="">
+<p><strong>enableKeyboardControl</strong>: Navigate selection lists with keyboard</p>
+<ul>
+<li class="">Arrow keys for navigation</li>
+<li class="">Enter to select</li>
+<li class="">Escape to cancel</li>
+<li class="">Improves accessibility and power-user workflows</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> USER_SELECT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">enableKeyboardControl</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">promptText</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Choose an option&#x27;</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>🔐 Admin Actions</strong></p>
+<ul>
+<li class="">
+<p><strong>admin</strong> flag: Mark actions as administrative</p>
+<ul>
+<li class="">Hidden from regular command palette</li>
+<li class="">Requires typing the full action name to access</li>
+<li class="">Useful for configuration reload, cache clearing, debugging tools</li>
+<li class="">Prevents accidental execution of sensitive operations</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Reload Configuration&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">admin</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">flow</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># Reload steps</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>✨ Conditional Visibility with Templates</strong></p>
+<ul>
+<li class="">
+<p><strong>isAvailable</strong> now supports Nunjucks template expressions</p>
+<ul>
+<li class="">Use <code>{{ }}</code> syntax for dynamic conditions</li>
+</ul>
+<div class="language-yaml codeBlockContainer_JH_B theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_cFO2"><pre tabindex="0" class="prism-code language-yaml codeBlock_z2x2 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_RwTv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">title</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Report Action&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">isAvailable</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;{{ ctx.activeObject.getInfo().type == &#x27;EOM::CompoundStory&#x27; }}&quot;</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>Additional Improvements</strong></p>
+<ul>
+<li class="">JSON schema updates for all new features</li>
+<li class="">New document lifecycle operations available in workflows and scripts:<!-- -->
+<ul>
+<li class=""><code>SAVE_DOCUMENT</code> step supports optional <code>close</code> behavior</li>
+<li class=""><code>CLOSE_DOCUMENT</code> step closes the current document</li>
+<li class="">Scripting API now supports <code>client.saveDocument({ close: true })</code> and <code>client.closeDocument()</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="1012---february-7-2025">1.0.12 - February 7, 2025<a href="#1012---february-7-2025" class="hash-link" aria-label="Direct link to 1.0.12 - February 7, 2025" title="Direct link to 1.0.12 - February 7, 2025" translate="no">​</a></h3>
+<p><strong>🎯 Slash Menu</strong></p>
+<p>The new slash menu brings Notion-style command access to ProActions:</p>
+<ul>
+<li class="">Type <code>/</code> anywhere in the editor to open the slash menu</li>
+<li class="">Configuration consistent with TEXT_MENU and ONECLICK_MENU</li>
+<li class="">Provides quick access to actions without keyboard shortcuts</li>
+</ul>
+<p><strong>New Steps</strong></p>
+<ul>
+<li class=""><strong>END_IF</strong> - Conditionally terminate flow execution</li>
+<li class=""><strong>SANITIZE</strong> - Validate and repair XML content<!-- -->
+<ul>
+<li class="">Essential for AI-generated XML where validity is uncertain</li>
+<li class="">Can automatically fix common XML issues</li>
+</ul>
+</li>
+<li class=""><strong>ELEVENLABS_TTS</strong> - ElevenLabs Text-to-Speech integration</li>
+<li class=""><strong>ELEVENLABS_STT</strong> - ElevenLabs Speech-to-Text integration</li>
+</ul>
+<p><strong>Enhanced Features</strong></p>
+<ul>
+<li class="">
+<p><strong>HUB_YOUTUBE_UPLOAD</strong></p>
+<ul>
+<li class="">Now supports uploading video thumbnails</li>
+<li class="">Improved video upload workflow</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Méthode XML to Markdown</strong></p>
+<ul>
+<li class="">New <code>client.xmlToMarkdown(xml)</code> function</li>
+<li class="">Simplifies content export and preview</li>
+</ul>
+</li>
+</ul>
+<p><strong>Prime 8 Integration</strong></p>
+<ul>
+<li class="">Full integration with Prime 8 Command Palette framework</li>
+<li class="">Specialized visualization for Prime 8</li>
+<li class=""><strong>CHANGE_VIEW_SIZE</strong> step to control palette sizing</li>
+</ul>
+<p><strong>ProActions Financial Services</strong></p>
+<p>New client functions for financial services integration:</p>
+<ul>
+<li class=""><code>client.getContainerTextContent()</code> - Fetch full report text in Swing and Prime</li>
+<li class=""><code>client.getContainerXmlContents()</code> - Retrieve XML and LOIDs for all report sections</li>
+<li class="">Enhanced <code>client.getTextContent()</code> - Returns selected section text</li>
+<li class="">Enhanced <code>client.getXmlContent()</code> - Returns selected section XML</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li class=""><code>client.isReadonly()</code> now checks if active user holds the lock on the active object</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="1011---april-28-2025">1.0.11 - April 28, 2025<a href="#1011---april-28-2025" class="hash-link" aria-label="Direct link to 1.0.11 - April 28, 2025" title="Direct link to 1.0.11 - April 28, 2025" translate="no">​</a></h3>
+<p><strong>🎓 Schema Support</strong></p>
+<p>Created and registered ProActions AI-Kit schema for enhanced development:</p>
+<ul>
+<li class="">Auto-completion for configuration files</li>
+<li class="">Real-time validation</li>
+<li class="">Inline documentation</li>
+<li class="">Registered at <a href="https://schemastore.org" target="_blank" rel="noopener noreferrer" class="">schemastore.org</a></li>
+<li class="">Reduces configuration errors significantly</li>
+</ul>
+<p><strong>Configuration Enhancements</strong></p>
+<p><em>Actions and Sections:</em></p>
+<ul>
+<li class=""><strong><code>app</code> attribute</strong> - Specify if action/section is for &quot;swing&quot; or &quot;prime&quot;</li>
+<li class=""><strong><code>category</code> attribute</strong> - Set sub-category for better organization in Prime Panel</li>
+<li class=""><strong><code>hiddenInPanel</code> attribute</strong> - Hide specific actions in Prime Panel</li>
+<li class=""><strong><code>sectionIcon</code> attribute</strong> - Custom icon for sections in Prime Panel</li>
+<li class=""><strong><code>panelContext</code> attribute</strong> - Specify context actions for selected elements</li>
+</ul>
+<p><strong>YouTube Integration</strong></p>
+<p>New steps for YouTube video management:</p>
+<ul>
+<li class=""><strong>HUB_YOUTUBE_AUTH_INIT</strong> - Initialize OAuth 2.0 authentication</li>
+<li class=""><strong>HUB_YOUTUBE_AUTH_STATUS</strong> - Check authentication status</li>
+<li class=""><strong>HUB_YOUTUBE_AUTH_LOGOUT</strong> - Logout authenticated accounts</li>
+<li class=""><strong>HUB_YOUTUBE_UPLOAD</strong> - Upload videos to YouTube</li>
+</ul>
+<p><strong>User Data Persistence</strong></p>
+<p>New client functions for user profile data:</p>
+<ul>
+<li class=""><code>getUserData()</code> - Retrieve stored user data</li>
+<li class=""><code>setUserData()</code> - Save user-specific data for future sessions</li>
+</ul>
+<p><strong>Development Support</strong></p>
+<ul>
+<li class=""><strong>Training Mode</strong> - Load configs from local development server</li>
+<li class="">Enable with <code>trainingMode</code> configuration</li>
+<li class="">Use with <a href="https://github.com/em-al-wi/proactions-dev" target="_blank" rel="noopener noreferrer" class="">proactions-dev</a></li>
+</ul>
+<p><strong>Prime Enhancements</strong></p>
+<ul>
+<li class="">Improved XML management with <code>getXmlAtXpath</code> and <code>replaceXmlAtXpath</code></li>
+<li class="">Better XML insert location support</li>
+<li class="">Improved read-only state detection using <code>IsModifyable()</code></li>
+</ul>
+<p><strong>Step Improvements</strong></p>
+<ul>
+<li class=""><strong>CLIPBOARD</strong> - Browser compatibility fallbacks</li>
+<li class=""><strong>FORM</strong>
+<ul>
+<li class="">Key-value pairs for select options and radio items</li>
+<li class="">New form components: datetime, color, range</li>
+</ul>
+</li>
+<li class=""><strong>REST</strong> - <code>formData</code> attribute for multipart form data</li>
+</ul>
+<p><strong>Branding</strong></p>
+<ul>
+<li class="">Product name changed to &quot;Eidosmedia ProActions&quot; (formerly &quot;Swing ProActions&quot;)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="1010---february-27-2025">1.0.10 - February 27, 2025<a href="#1010---february-27-2025" class="hash-link" aria-label="Direct link to 1.0.10 - February 27, 2025" title="Direct link to 1.0.10 - February 27, 2025" translate="no">​</a></h3>
+<p><strong>📝 Enhanced Forms</strong></p>
+<p>New FormComponents for richer user interfaces:</p>
+<ul>
+<li class=""><strong>headline</strong> - Section headers in forms</li>
+<li class=""><strong>html</strong> - Rich HTML content display</li>
+<li class=""><strong>markdown</strong> - Markdown rendering in forms</li>
+<li class=""><strong>diff</strong> - Side-by-side text comparison</li>
+<li class=""><strong>hr</strong> - Horizontal rules for visual separation</li>
+<li class=""><strong>Custom buttons</strong> - Define multiple action buttons</li>
+</ul>
+<p><strong>New Steps</strong></p>
+<ul>
+<li class=""><strong>MARKDOWN_TO_HTML</strong> - Transform Markdown to HTML format</li>
+</ul>
+<p><strong>Enhanced Steps</strong></p>
+<ul>
+<li class="">
+<p><strong>USER_SELECT</strong></p>
+<ul>
+<li class=""><code>infoTitle</code> attribute for additional context</li>
+<li class=""><code>infoText</code> attribute for descriptive information above list</li>
+</ul>
+</li>
+<li class="">
+<p><strong>SCRIPTING</strong></p>
+<ul>
+<li class="">Now supports asynchronous JavaScript execution</li>
+<li class="">Greater workflow flexibility</li>
+</ul>
+</li>
+<li class="">
+<p><strong>SHOW_RESPONSE</strong></p>
+<ul>
+<li class="">HTML response rendering support</li>
+</ul>
+</li>
+</ul>
+<p><strong>Language Support</strong></p>
+<ul>
+<li class="">✨ <strong>Spanish Translation</strong> - ProActions now available in Spanish</li>
+<li class="">Supported languages: English, Spanish, French, Italian, German</li>
+</ul>
+<p><strong>Context Handling</strong></p>
+<ul>
+<li class="">Multiple contexts support in sections and actions</li>
+<li class="">Improved fallback mechanisms for Swing 5.2022.10</li>
+<li class="">Context support added for Prime</li>
+<li class="">Better context detection across platforms</li>
+</ul>
+<p><strong>Editor Protection</strong></p>
+<ul>
+<li class="">Steps that modify content now check for read-only mode:<!-- -->
+<ul>
+<li class="">INSERT_TEXT, INSERT_XML</li>
+<li class="">REPLACE_TEXT, REPLACE_XML</li>
+<li class="">INSERT_LIST</li>
+</ul>
+</li>
+</ul>
+<p><strong>Text and Oneclick Menu</strong></p>
+<ul>
+<li class=""><code>forElement</code> configuration now supports &quot;DummyText&quot;</li>
+</ul>
+<p><strong>Maintenance</strong></p>
+<ul>
+<li class="">Updated all dependencies to latest versions</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="109---january-26-2025">1.0.9 - January 26, 2025<a href="#109---january-26-2025" class="hash-link" aria-label="Direct link to 1.0.9 - January 26, 2025" title="Direct link to 1.0.9 - January 26, 2025" translate="no">​</a></h3>
+<p><strong>DeepL Write Integration</strong></p>
+<ul>
+<li class=""><strong>New Step: DEEPL_WRITE</strong> - Send text for improvement to DeepL</li>
+<li class="">Enables text refinement and optimization</li>
+<li class="">Note: DeepL Write API does not support XML format text</li>
+</ul>
+<p><strong>INSERT_XML and INSERT_LIST Enhancements</strong></p>
+<p>New <strong>position</strong> parameter for flexible insertion:</p>
+<ul>
+<li class=""><code>insertInline</code> (default) - Insert at cursor position</li>
+<li class=""><code>insertBefore</code> - Insert before cursor context</li>
+<li class=""><code>insertAfter</code> - Insert after cursor context</li>
+<li class="">Effective in Swing when <code>at</code> is set to <code>&quot;CURSOR&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="108---december-13-2024">1.0.8 - December 13, 2024<a href="#108---december-13-2024" class="hash-link" aria-label="Direct link to 1.0.8 - December 13, 2024" title="Direct link to 1.0.8 - December 13, 2024" translate="no">​</a></h3>
+<p><strong>📊 Progress Bar Element</strong></p>
+<p>Visual feedback for long-running workflows:</p>
+<ul>
+<li class=""><strong>SHOW_PROGRESS</strong> - Display progress bar</li>
+<li class=""><strong>UPDATE_PROGRESS</strong> - Update progress state</li>
+<li class=""><strong>HIDE_PROGRESS</strong> - Hide progress bar</li>
+<li class="">Auto-hides on workflow completion or error</li>
+</ul>
+<p><strong>Dashboard Actions</strong></p>
+<ul>
+<li class="">AI-Kit now supports dashboard actions</li>
+<li class="">New <strong>context</strong> configuration for actions and sections</li>
+<li class="">Ensures actions only visible in relevant contexts</li>
+<li class="">⚠️ <strong>Action Required</strong>: Add <code>context:</code> config for context-specific actions</li>
+</ul>
+<p><strong>Translation Management</strong></p>
+<ul>
+<li class="">Translations now built into solution</li>
+<li class="">⚠️ <strong>Action Required</strong>: Remove standalone locale files</li>
+</ul>
+<p><strong>One-Click Menu Enhancement</strong></p>
+<ul>
+<li class="">New <code>forTags</code> configuration option</li>
+<li class="">Define menu appearance based on parent tags</li>
+</ul>
+<p><strong>Content Filtering</strong></p>
+<ul>
+<li class="">Optional parameters for <code>client.getTextContent</code> and <code>client.getXmlContent</code></li>
+<li class=""><code>GetTextContentOptions</code> - Filter returned content</li>
+<li class=""><code>GetXmlContentOptions</code> - Filter returned XML</li>
+<li class="">Example: Exclude specific tags from content</li>
+</ul>
+<p><strong>Minor Updates</strong></p>
+<ul>
+<li class=""><strong>Hide sections</strong> - Hide all actions within a section</li>
+<li class=""><strong>Azure OpenAI</strong> - Updated IMAGE_GENERATION API version to <code>2024-10-01-preview</code></li>
+<li class=""><strong>client.getContext()</strong> - New function to identify user&#x27;s current context</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="107---november-14-2024">1.0.7 - November 14, 2024<a href="#107---november-14-2024" class="hash-link" aria-label="Direct link to 1.0.7 - November 14, 2024" title="Direct link to 1.0.7 - November 14, 2024" translate="no">​</a></h3>
+<p><strong>🎨 Context-Based Menus</strong></p>
+<p>Two new highly configurable menus:</p>
+<p><em>Text Selection Menu:</em></p>
+<ul>
+<li class="">Appears when text is selected</li>
+<li class="">Quick access to text-specific actions</li>
+<li class="">Fully customizable per context</li>
+<li class="">Permission-based visibility</li>
+</ul>
+<p><em>One-Click Menu:</em></p>
+<ul>
+<li class="">Appears on left side of content items</li>
+<li class="">Activated when cursor is placed inside content</li>
+<li class="">Context-sensitive actions</li>
+<li class="">Per-action permissions</li>
+</ul>
+<p><strong>External Configuration Management</strong></p>
+<ul>
+<li class=""><strong>!include directive</strong> - Include external SysConfig files</li>
+<li class="">Modular configuration management</li>
+<li class="">Better organization and maintainability</li>
+<li class="">Example: <code>!include /SysConfig/ProActions/services.yaml</code></li>
+</ul>
+<p><strong>New Steps</strong></p>
+<ul>
+<li class=""><strong>CLEAR_SELECTION</strong> - Clear text selection without replacement</li>
+<li class="">Useful before INSERT_TEXT or INSERT_XML steps</li>
+</ul>
+<p><strong>Stability AI Enhancement</strong></p>
+<ul>
+<li class=""><strong>SEARCH_AND_RECOLOR</strong> - Identify and recolor image components</li>
+<li class="">Uses Stability AI&#x27;s recoloring model</li>
+</ul>
+<p><strong>LLM Response Format</strong></p>
+<ul>
+<li class=""><strong>response_format</strong> option for OpenAI ChatGPT and Google Gemini</li>
+<li class="">Enforce JSON response structure</li>
+<li class="">Custom schema support</li>
+<li class="">Alias <code>list</code> for JSON list enforcement</li>
+</ul>
+<p><strong>Step Improvements</strong></p>
+<ul>
+<li class=""><strong>DOWNLOAD</strong> - Now supports downloading blobs</li>
+<li class=""><strong>INSERT_LIST / TO_LIST</strong> - Improved list parsing logic<!-- -->
+<ul>
+<li class="">Removes double newlines</li>
+<li class="">Cleaner list generation</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="106---october-11-2024">1.0.6 - October 11, 2024<a href="#106---october-11-2024" class="hash-link" aria-label="Direct link to 1.0.6 - October 11, 2024" title="Direct link to 1.0.6 - October 11, 2024" translate="no">​</a></h3>
+<p><strong>🎤 Speech Services</strong></p>
+<ul>
+<li class="">New Text-to-Speech (TTS) models from OpenAI and Azure OpenAI</li>
+<li class="">High-quality voice synthesis</li>
+<li class="">Multiple voice options</li>
+</ul>
+<p><strong>Document Metadata</strong></p>
+<ul>
+<li class="">New placeholders for document name and issue date</li>
+<li class="">Enhanced client functions for metadata access</li>
+</ul>
+<p><strong>🔒 Permissions System</strong></p>
+<p>Configure access control for sections and actions:</p>
+<ul>
+<li class=""><code>forUsers</code> - User-level permissions</li>
+<li class=""><code>forGroups</code> - Group-level permissions</li>
+<li class=""><code>forTeams</code> - Team-level permissions</li>
+</ul>
+<p><strong>New Steps</strong></p>
+<ul>
+<li class=""><strong>DEBUG</strong> - Write flowContext to developer console</li>
+<li class="">Creates breakpoint for debugging</li>
+<li class="">Essential for workflow troubleshooting</li>
+</ul>
+<p><strong>Templating Engine</strong></p>
+<ul>
+<li class="">Integrated Mozilla&#x27;s Nunjucks templating engine</li>
+<li class="">Enhanced string handling</li>
+<li class="">Powerful placeholder system</li>
+</ul>
+<p><strong>Step Enhancements</strong></p>
+<ul>
+<li class="">
+<p><strong>IF, WHILE, SWITCH</strong> - New <code>condition</code> attribute</p>
+<ul>
+<li class="">Supports string placeholders with Nunjucks</li>
+<li class="">More flexible conditional logic</li>
+</ul>
+</li>
+<li class="">
+<p><strong>SET, SWITCH</strong> - Simplified syntax</p>
+<ul>
+<li class="">Replaced name/expression attributes with key-value pairs</li>
+<li class="">Cleaner configuration</li>
+</ul>
+</li>
+</ul>
+<p><strong>User Experience</strong></p>
+<ul>
+<li class=""><strong>Instant Actions</strong> - Execute on ProActions icon click</li>
+<li class="">Improved workflow initiation</li>
+</ul>
+<p><strong>Technical Updates</strong></p>
+<ul>
+<li class="">Removed deprecated DOMSubtreeModified MutationEvent</li>
+<li class="">Better cursor location monitoring</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="105---september-3-2024">1.0.5 - September 3, 2024<a href="#105---september-3-2024" class="hash-link" aria-label="Direct link to 1.0.5 - September 3, 2024" title="Direct link to 1.0.5 - September 3, 2024" translate="no">​</a></h3>
+<p><strong>New Steps</strong></p>
+<ul>
+<li class=""><strong>DOWNLOAD_TEXT</strong> - Download text content from flow</li>
+<li class=""><strong>WRITE_CLIPBOARD</strong> - Write to user clipboard</li>
+</ul>
+<p><strong>FILE_UPLOAD Enhancement</strong></p>
+<ul>
+<li class="">New output types: <code>text</code> and <code>arrayBuffer</code></li>
+<li class="">More flexible file handling</li>
+</ul>
+<p><strong>Dynamic Placeholders</strong></p>
+<ul>
+<li class=""><code>reportId</code> - Report identifier</li>
+<li class=""><code>reportLoid</code> - Report LOID</li>
+<li class=""><code>reportUuid</code> - Report UUID</li>
+</ul>
+<p><strong>API Enhancements</strong></p>
+<ul>
+<li class="">Access Metadata, System Metadata, Usage Tickets, Virtual Attributes</li>
+<li class="">Support for both story and report (container) contexts</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="104---august-15-2024">1.0.4 - August 15, 2024<a href="#104---august-15-2024" class="hash-link" aria-label="Direct link to 1.0.4 - August 15, 2024" title="Direct link to 1.0.4 - August 15, 2024" translate="no">​</a></h3>
+<p><strong>Performance Improvements</strong></p>
+<ul>
+<li class="">Faster placeholder resolution</li>
+<li class="">Asynchronous configuration loading</li>
+<li class="">Improved overall responsiveness</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="103---august-14-2024">1.0.3 - August 14, 2024<a href="#103---august-14-2024" class="hash-link" aria-label="Direct link to 1.0.3 - August 14, 2024" title="Direct link to 1.0.3 - August 14, 2024" translate="no">​</a></h3>
+<p><strong>🎨 Stability AI Integration</strong></p>
+<p>New steps for image processing:</p>
+<ul>
+<li class=""><strong>STABILITY_AI_UPSCALE</strong> - Enhance image resolution</li>
+<li class=""><strong>STABILITY_AI_OUTPAINT</strong> - Extend image boundaries</li>
+<li class=""><strong>STABILITY_AI_SEARCH_AND_REPLACE</strong> - Find and replace in images</li>
+</ul>
+<p><strong>Placeholder Improvements</strong></p>
+<ul>
+<li class="">Option to omit text when variable cannot be resolved</li>
+<li class="">More graceful handling of missing variables</li>
+</ul>
+<p><strong>Flow Control</strong></p>
+<ul>
+<li class="">Continue flow even when <code>then</code> or <code>else</code> block is missing</li>
+<li class="">More resilient conditional execution</li>
+</ul>
+<p><strong>INSERT_LIST Enhancement</strong></p>
+<ul>
+<li class="">Add entries to existing lists</li>
+<li class="">More flexible list management</li>
+</ul>
+<p><strong>REST Step Enhancement</strong></p>
+<ul>
+<li class="">Store response object in variable</li>
+<li class=""><code>requestOptions</code> configuration</li>
+<li class="">More control over REST calls</li>
+</ul>
+<p><strong>API Functions</strong></p>
+<ul>
+<li class=""><code>getSiteConfigString()</code> - Read from siteConfiguration</li>
+<li class="">Better integration with Méthode configuration</li>
+</ul>
+<p><strong>New Placeholders</strong></p>
+<ul>
+<li class=""><code>uuid</code> - Document UUID</li>
+<li class=""><code>loid</code> - Document LOID</li>
+<li class=""><code>appName</code> - Application name (swing/prime)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="migration-notes">Migration Notes<a href="#migration-notes" class="hash-link" aria-label="Direct link to Migration Notes" title="Direct link to Migration Notes" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="upgrading-to-110">Upgrading to 1.1.0<a href="#upgrading-to-110" class="hash-link" aria-label="Direct link to Upgrading to 1.1.0" title="Direct link to Upgrading to 1.1.0" translate="no">​</a></h3>
+<p><strong>⚠️ TEXT_MENU Deprecation (Action Required)</strong></p>
+<ul>
+<li class="">Migrate all TEXT_MENU configurations to use <code>swing.inlineMenu</code></li>
+<li class="">Using TEXT_MENU in recent Swing versions causes UI conflicts</li>
+<li class="">TEXT_MENU will be removed in a future version</li>
+</ul>
+<p>Migration steps:</p>
+<ol>
+<li class="">Identify all actions using TEXT_MENU configuration</li>
+<li class="">Replace with <code>swing.inlineMenu</code> configuration</li>
+<li class="">Test in your Swing environment</li>
+<li class="">Remove TEXT_MENU sections from configuration</li>
+</ol>
+<p><strong>New Features</strong></p>
+<ul>
+<li class="">All new features are opt-in and backward compatible</li>
+<li class="">Interactive diff available in FORM step with <code>type: &#x27;diff&#x27;</code></li>
+<li class="">Inline steps can be added to existing FORM, USER_SELECT, and SHOW_RESPONSE steps</li>
+<li class="">Swing integrations work alongside existing action definitions</li>
+<li class="">New control flow steps (BREAK, FOR, TRY, PARALLEL) available immediately</li>
+</ul>
+<p><strong>Recommended Actions</strong></p>
+<ul>
+<li class="">Consider using <code>inlineSteps</code> for actions with LLM calls to improve UX</li>
+<li class="">Explore interactive diff for text improvement workflows</li>
+<li class="">Review admin actions and add <code>admin: true</code> flag where appropriate</li>
+<li class="">Update <code>isAvailable</code> conditions to use Nunjucks templates for better readability</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="upgrading-to-1012">Upgrading to 1.0.12<a href="#upgrading-to-1012" class="hash-link" aria-label="Direct link to Upgrading to 1.0.12" title="Direct link to Upgrading to 1.0.12" translate="no">​</a></h3>
+<ul>
+<li class="">No breaking changes</li>
+<li class="">New features are opt-in</li>
+<li class="">Consider enabling Slash Menu for improved UX</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="upgrading-to-1011">Upgrading to 1.0.11<a href="#upgrading-to-1011" class="hash-link" aria-label="Direct link to Upgrading to 1.0.11" title="Direct link to Upgrading to 1.0.11" translate="no">​</a></h3>
+<ul>
+<li class="">Schema support requires VS Code YAML extension update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="upgrading-to-108">Upgrading to 1.0.8<a href="#upgrading-to-108" class="hash-link" aria-label="Direct link to Upgrading to 1.0.8" title="Direct link to Upgrading to 1.0.8" translate="no">​</a></h3>
+<ul>
+<li class="">Remove standalone ProActions locale files (now built-in)</li>
+<li class="">Add <code>context:</code> configuration to context-specific actions</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_zIqo" id="getting-help">Getting Help<a href="#getting-help" class="hash-link" aria-label="Direct link to Getting Help" title="Direct link to Getting Help" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Documentation</strong>: See <a class="" href="/proactions-docs/getting-started/your-first-flow">Getting Started Guide</a></li>
+<li class=""><strong>Issues</strong>: Check existing issues or report new ones</li>
+<li class=""><strong>Community</strong>: Join ProActions Developer Community</li>
+<li class=""><strong>Support</strong>: Contact Eidosmedia support team</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_P0JP thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#recent-highlights" class="table-of-contents__link toc-highlight">Recent Highlights</a><ul><li><a href="#whats-new-in-120-upcoming" class="table-of-contents__link toc-highlight">What&#39;s New in 1.2.0 (upcoming)</a></li><li><a href="#whats-new-in-110-latest" class="table-of-contents__link toc-highlight">What&#39;s New in 1.1.0 (latest)</a></li><li><a href="#major-features-since-100" class="table-of-contents__link toc-highlight">Major Features Since 1.0.0</a></li></ul></li><li><a href="#version-history" class="table-of-contents__link toc-highlight">Version History</a></li><li><a href="#detailed-release-notes" class="table-of-contents__link toc-highlight">Detailed Release Notes</a><ul><li><a href="#120---february-2026" class="table-of-contents__link toc-highlight">1.2.0 - February 2026</a></li><li><a href="#110---october-24-2025" class="table-of-contents__link toc-highlight">1.1.0 - October 24 2025</a></li><li><a href="#1012---february-7-2025" class="table-of-contents__link toc-highlight">1.0.12 - February 7, 2025</a></li><li><a href="#1011---april-28-2025" class="table-of-contents__link toc-highlight">1.0.11 - April 28, 2025</a></li><li><a href="#1010---february-27-2025" class="table-of-contents__link toc-highlight">1.0.10 - February 27, 2025</a></li><li><a href="#109---january-26-2025" class="table-of-contents__link toc-highlight">1.0.9 - January 26, 2025</a></li><li><a href="#108---december-13-2024" class="table-of-contents__link toc-highlight">1.0.8 - December 13, 2024</a></li><li><a href="#107---november-14-2024" class="table-of-contents__link toc-highlight">1.0.7 - November 14, 2024</a></li><li><a href="#106---october-11-2024" class="table-of-contents__link toc-highlight">1.0.6 - October 11, 2024</a></li><li><a href="#105---september-3-2024" class="table-of-contents__link toc-highlight">1.0.5 - September 3, 2024</a></li><li><a href="#104---august-15-2024" class="table-of-contents__link toc-highlight">1.0.4 - August 15, 2024</a></li><li><a href="#103---august-14-2024" class="table-of-contents__link toc-highlight">1.0.3 - August 14, 2024</a></li></ul></li><li><a href="#migration-notes" class="table-of-contents__link toc-highlight">Migration Notes</a><ul><li><a href="#upgrading-to-110" class="table-of-contents__link toc-highlight">Upgrading to 1.1.0</a></li><li><a href="#upgrading-to-1012" class="table-of-contents__link toc-highlight">Upgrading to 1.0.12</a></li><li><a href="#upgrading-to-1011" class="table-of-contents__link toc-highlight">Upgrading to 1.0.11</a></li><li><a href="#upgrading-to-108" class="table-of-contents__link toc-highlight">Upgrading to 1.0.8</a></li></ul></li><li><a href="#getting-help" class="table-of-contents__link toc-highlight">Getting Help</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Eidosmedia. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

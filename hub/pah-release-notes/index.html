@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-hub/pah-release-notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">ProActions Hub Release Notes | ProActions Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://em-al-wi.github.io/proactions-docs/hub/pah-release-notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="ProActions Hub Release Notes | ProActions Documentation"><meta data-rh="true" name="description" content="1.2.0 - 05/02/2026"><meta data-rh="true" property="og:description" content="1.2.0 - 05/02/2026"><link data-rh="true" rel="icon" href="/proactions-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://em-al-wi.github.io/proactions-docs/hub/pah-release-notes"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/hub/pah-release-notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs/hub/pah-release-notes" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hub Release Notes","item":"https://em-al-wi.github.io/proactions-docs/hub/pah-release-notes"}]}</script><link rel="stylesheet" href="/proactions-docs/assets/css/styles.85e57e58.css">
+<script src="/proactions-docs/assets/js/runtime~main.ae25cf5f.js" defer="defer"></script>
+<script src="/proactions-docs/assets/js/main.71e5748b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_HLd7" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proactions-docs/"><b class="navbar__title text--truncate">ProActions</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proactions-docs/intro">Documentation</a><a class="navbar__item navbar__link" href="/proactions-docs/release-notes">Release Notes</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_k5YO colorModeToggle_kzyk"><button class="clean-btn toggleButton_iYsp toggleButtonDisabled_V_0o" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o lightToggleIcon_Z_lD"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o darkToggleIcon_EApx"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_b06o systemToggleIcon_ewKK"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_dFOU"><div class="navbar__search searchBarContainer__EhK" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_LnXF" value=""><div class="loadingRing__4YV searchBarLoadingRing_yZZB"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_zgir"><div class="docsWrapper_j6Sj"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_qpav" type="button"></button><div class="docRoot_qRRu"><aside class="theme-doc-sidebar-container docSidebarContainer_kQHK"><div class="sidebarViewport_yi2q"><div class="sidebar_F5aY"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_i4M9"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/proactions-docs/intro"><span title="Welcome to ProActions" class="linkLabel_N8i1">Welcome to ProActions</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/setup/overview"><span title="Setup" class="categoryLinkLabel_fwTo">Setup</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/overview"><span title="Setup Overview" class="linkLabel_N8i1">Setup Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/installation"><span title="Installation" class="linkLabel_N8i1">Installation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/configuration"><span title="Configuration" class="linkLabel_N8i1">Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/keyboard-shortcuts"><span title="Keyboard Shortcuts" class="linkLabel_N8i1">Keyboard Shortcuts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/setup/vscode-setup"><span title="VSIDE and File Conventions" class="linkLabel_N8i1">VSIDE and File Conventions</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/getting-started/your-first-flow"><span title="Getting Started" class="categoryLinkLabel_fwTo">Getting Started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/your-first-flow"><span title="Your First Flow" class="linkLabel_N8i1">Your First Flow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/understanding-steps"><span title="Understanding Steps" class="linkLabel_N8i1">Understanding Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/working-with-variables"><span title="Working with Variables" class="linkLabel_N8i1">Working with Variables</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/getting-started/using-services"><span title="Using Services" class="linkLabel_N8i1">Using Services</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/proactions-docs/step-library/overview"><span title="Step Library" class="categoryLinkLabel_fwTo">Step Library</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/proactions-docs/guides/configuration/basics"><span title="Guides" class="categoryLinkLabel_fwTo">Guides</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/configuration/basics"><span title="Configuration" class="categoryLinkLabel_fwTo">Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/howto/debug-flows"><span title="How-To" class="categoryLinkLabel_fwTo">How-To</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/guides/examples/headline-suggestions"><span title="Examples" class="categoryLinkLabel_fwTo">Examples</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/proactions-docs/hub/overview"><span title="ProActions Hub" class="categoryLinkLabel_fwTo">ProActions Hub</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/hub/overview"><span title="Overview" class="linkLabel_N8i1">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/hub/configuration"><span title="Setup &amp; Configuration" class="linkLabel_N8i1">Setup &amp; Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/proactions-docs/hub/pah-release-notes"><span title="Hub Release Notes" class="linkLabel_N8i1">Hub Release Notes</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/hub/mcp-gateway"><span title="MCP Gateway" class="linkLabel_N8i1">MCP Gateway</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proactions-docs/hub/custom-mcp-servers"><span title="Custom MCP Servers" class="linkLabel_N8i1">Custom MCP Servers</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/hub/config/ai-link"><span title="Hub Configuration" class="categoryLinkLabel_fwTo">Hub Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_zYxI menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/proactions-docs/hub/admin-panel"><span title="Hub Operations" class="categoryLinkLabel_fwTo">Hub Operations</span></a></div></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_Ejko"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_HyX0"><div class="docItemContainer_WE4q"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_N_ck" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/proactions-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_dRb0"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">ProActions Hub</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Hub Release Notes</span></li></ul></nav><div class="tocCollapsible_tO0Z theme-doc-toc-mobile tocMobile_TinA"><button type="button" class="clean-btn tocCollapsibleButton_soVr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>ProActions Hub Release Notes</h1></header><h3 class="anchor anchorTargetStickyNavbar_zIqo" id="120---05022026">1.2.0 - 05/02/2026<a href="#120---05022026" class="hash-link" aria-label="Direct link to 1.2.0 - 05/02/2026" title="Direct link to 1.2.0 - 05/02/2026" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="new-features">New Features<a href="#new-features" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="mcp-gateway---remote-server-support">MCP Gateway - Remote Server Support<a href="#mcp-gateway---remote-server-support" class="hash-link" aria-label="Direct link to MCP Gateway - Remote Server Support" title="Direct link to MCP Gateway - Remote Server Support" translate="no">​</a></h5>
+<ul>
+<li class="">
+<p><strong>HTTP Transport (<code>transport: http</code>):</strong></p>
+<ul>
+<li class="">Connect to remote MCP servers via Streamable HTTP protocol</li>
+<li class="">Uses HTTP POST for sending requests and Server-Sent Events (SSE) for receiving responses</li>
+<li class="">Custom headers support for authentication (e.g., <code>Authorization: Bearer ...</code>)</li>
+<li class="">Ideal for centralized MCP servers or third-party hosted services</li>
+</ul>
+</li>
+<li class="">
+<p><strong>WebSocket Transport (<code>transport: websocket</code>):</strong></p>
+<ul>
+<li class="">Connect to remote MCP servers via WebSocket for low-latency, bidirectional communication</li>
+<li class="">Suitable for real-time MCP servers requiring persistent connections</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Backward Compatible:</strong></p>
+<ul>
+<li class=""><code>stdio</code> transport remains the default for local subprocess-based MCP servers</li>
+<li class="">Existing configurations continue to work without changes</li>
+</ul>
+</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="mcp-gateway---connection-stability-improvements">MCP Gateway - Connection Stability Improvements<a href="#mcp-gateway---connection-stability-improvements" class="hash-link" aria-label="Direct link to MCP Gateway - Connection Stability Improvements" title="Direct link to MCP Gateway - Connection Stability Improvements" translate="no">​</a></h5>
+<ul>
+<li class="">
+<p><strong>Configurable Timeouts:</strong></p>
+<ul>
+<li class=""><code>connectTimeout</code>: Connection timeout in milliseconds (default: 30000ms)</li>
+<li class=""><code>toolTimeout</code>: Tool invocation timeout in milliseconds (default: 60000ms)</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Connection Reliability:</strong></p>
+<ul>
+<li class="">Automatic transport cleanup on connection failure (prevents orphaned processes/connections)</li>
+<li class="">Disconnect timeout protection during shutdown (prevents hanging on unresponsive servers)</li>
+<li class="">Async connection drop detection via transport lifecycle handlers</li>
+<li class="">Timer leak fixes in timeout handling</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="documentation">Documentation<a href="#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation" translate="no">​</a></h4>
+<ul>
+<li class="">Updated MCP Gateway documentation with remote transport configuration examples</li>
+<li class="">Added transport type comparison table</li>
+<li class="">Added security considerations for remote connections</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="110---11112025">1.1.0 - 11/11/2025<a href="#110---11112025" class="hash-link" aria-label="Direct link to 1.1.0 - 11/11/2025" title="Direct link to 1.1.0 - 11/11/2025" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="new-features-1">New Features<a href="#new-features-1" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="enhanced-ai-provider-support">Enhanced AI Provider Support<a href="#enhanced-ai-provider-support" class="hash-link" aria-label="Direct link to Enhanced AI Provider Support" title="Direct link to Enhanced AI Provider Support" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>9 New AI Providers Added:</strong>
+<ul>
+<li class=""><strong>LEPTON</strong> - Lepton AI cloud platform</li>
+<li class=""><strong>KLUSTER_AI</strong> - Kluster AI services</li>
+<li class=""><strong>NSCALE</strong> - nScale AI infrastructure</li>
+<li class=""><strong>HYPERBOLIC</strong> - Hyperbolic AI platform</li>
+<li class=""><strong>BYTEZ</strong> - Bytez AI services</li>
+<li class=""><strong>FEATHERLESS_AI</strong> - Featherless AI</li>
+<li class=""><strong>KRUTRIM</strong> - Krutrim AI</li>
+<li class=""><strong>QDRANT</strong> - Qdrant vector database AI</li>
+<li class=""><strong>THREE_ZERO_TWO_AI</strong> - 302.AI platform</li>
+</ul>
+</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="custom-ai-link-configurations">Custom AI-Link Configurations:<a href="#custom-ai-link-configurations" class="hash-link" aria-label="Direct link to Custom AI-Link Configurations:" title="Direct link to Custom AI-Link Configurations:" translate="no">​</a></h5>
+<ul>
+<li class="">Added support for advanced configuration objects</li>
+<li class="">Enables custom load balancing strategies and fallback configurations</li>
+<li class="">Allows guardrail integration for content moderation</li>
+<li class="">Provides flexibility for complex multi-provider setups</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="custom-openai-compatible-providers">Custom OpenAI-Compatible Providers:<a href="#custom-openai-compatible-providers" class="hash-link" aria-label="Direct link to Custom OpenAI-Compatible Providers:" title="Direct link to Custom OpenAI-Compatible Providers:" translate="no">​</a></h5>
+<ul>
+<li class="">Integration support for any OpenAI-compatible API endpoint</li>
+<li class="">Configurable endpoint URL with placeholder support (e.g., <code>{path}</code>)</li>
+<li class="">Custom header management for provider-specific authentication</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="ai-gateway-reliability--performance">AI Gateway Reliability &amp; Performance<a href="#ai-gateway-reliability--performance" class="hash-link" aria-label="Direct link to AI Gateway Reliability &amp; Performance" title="Direct link to AI Gateway Reliability &amp; Performance" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Gateway Readiness Checks:</strong></p>
+<ul>
+<li class="">Requests are now rejected with HTTP 503 if AI Gateway is not ready</li>
+<li class="">Prevents request failures during gateway startup</li>
+<li class="">Improves overall system reliability and user experience</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Vertex AI Token Caching:</strong></p>
+<ul>
+<li class="">Implemented intelligent token caching for Google Vertex AI</li>
+<li class="">Reduces authentication overhead and improves response times</li>
+<li class="">Automatic token refresh and lifecycle management</li>
+</ul>
+</li>
+<li class="">
+<p><strong>AI Request Timeout Configuration:</strong></p>
+<ul>
+<li class="">Configurable timeout for AI requests to prevent hanging connections</li>
+<li class="">Default timeout protection against unresponsive upstream services</li>
+<li class="">Enhanced error details for timeout scenarios</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="security-enhancements">Security Enhancements<a href="#security-enhancements" class="hash-link" aria-label="Direct link to Security Enhancements" title="Direct link to Security Enhancements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Security Scanning Toolchain:</strong>
+<ul>
+<li class="">Integrated comprehensive security scanning tools (Trivy, Gitleaks, Docker Scout)</li>
+<li class="">Added npm scripts for vulnerability scanning workflows</li>
+<li class="">Automated secret detection and CVE scanning</li>
+<li class="">SBOM (Software Bill of Materials) generation support</li>
+</ul>
+</li>
+<li class=""><strong>Enhanced Session Cookie Security:</strong>
+<ul>
+<li class="">Consolidated cookie configuration under unified <code>cookie</code> key</li>
+<li class="">Added security defaults: <code>httpOnly</code>, <code>secure</code>, <code>sameSite</code> options</li>
+<li class="">Improved cookie secret management with automatic fallback and warnings</li>
+<li class="">Better protection against CSRF and session hijacking attacks</li>
+</ul>
+</li>
+<li class=""><strong>Configuration Security:</strong>
+<ul>
+<li class="">Added validation options for stricter configuration checking</li>
+<li class="">Improved configuration defaults for production deployments</li>
+<li class="">Enhanced error messages for misconfigured security settings</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="health-check-improvements">Health Check Improvements<a href="#health-check-improvements" class="hash-link" aria-label="Direct link to Health Check Improvements" title="Direct link to Health Check Improvements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Health Check Guard:</strong>
+<ul>
+<li class="">Added guard protection for health check endpoints</li>
+<li class="">Configurable access control for monitoring endpoints</li>
+<li class="">Supports deployment behind load balancers and orchestrators</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="improvements">Improvements<a href="#improvements" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="error-handling--diagnostics">Error Handling &amp; Diagnostics<a href="#error-handling--diagnostics" class="hash-link" aria-label="Direct link to Error Handling &amp; Diagnostics" title="Direct link to Error Handling &amp; Diagnostics" translate="no">​</a></h5>
+<ul>
+<li class="">
+<p><strong>Enriched HTTP Error Details:</strong></p>
+<ul>
+<li class="">Enhanced error messages with upstream connection details</li>
+<li class="">Better diagnostic information for debugging AI provider issues</li>
+<li class="">Improved logging of request/response errors with context</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Improved Error Logging:</strong></p>
+<ul>
+<li class="">More detailed error traces for troubleshooting</li>
+<li class="">Better filtering of sensitive data in error logs</li>
+<li class="">Enhanced log filtering for circular references and complex objects</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="logging-enhancements">Logging Enhancements<a href="#logging-enhancements" class="hash-link" aria-label="Direct link to Logging Enhancements" title="Direct link to Logging Enhancements" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Improved Sensitive Data Filtering:</strong></p>
+<ul>
+<li class="">Enhanced detection of API keys, tokens, and passwords</li>
+<li class="">Handles JSON-embedded credentials and circular object references</li>
+<li class="">More robust redaction across all log types</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Optimized Debug Logging:</strong></p>
+<ul>
+<li class="">Reduced verbose debug output in production</li>
+<li class="">Cleaned up unnecessary debug logs in tools and YouTube controllers</li>
+<li class="">Better performance with selective logging</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="prime-panel-updates">Prime Panel Updates<a href="#prime-panel-updates" class="hash-link" aria-label="Direct link to Prime Panel Updates" title="Direct link to Prime Panel Updates" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="status-indicator--notifications">Status Indicator &amp; Notifications<a href="#status-indicator--notifications" class="hash-link" aria-label="Direct link to Status Indicator &amp; Notifications" title="Direct link to Status Indicator &amp; Notifications" translate="no">​</a></h5>
+<p>Visual feedback system for communicating process status and notifications to users.</p>
+<h6 class="anchor anchorTargetStickyNavbar_zIqo" id="api-functions">API Functions:<a href="#api-functions" class="hash-link" aria-label="Direct link to API Functions:" title="Direct link to API Functions:" translate="no">​</a></h6>
+<ul>
+<li class=""><code>window.ProActionsPanel.setStatus(statusText)</code> - Displays a status bar at the bottom of the panel with animated indicators to show ongoing processes</li>
+<li class=""><code>window.ProActionsPanel.clearStatus()</code> - Hides the status bar</li>
+<li class=""><code>window.ProActionsPanel.showNotification(message, duration?)</code> - Shows a temporary toast notification (default: 3 seconds)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="infrastructure">Infrastructure<a href="#infrastructure" class="hash-link" aria-label="Direct link to Infrastructure" title="Direct link to Infrastructure" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Node.js 22 Runtime:</strong>
+<ul>
+<li class="">Continued use of Node.js 22 for optimal performance</li>
+<li class="">Updated Red Hat UBI8 base image with Node.js 22</li>
+<li class="">Enhanced stability and security with latest LTS features</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="109---02072025">1.0.9 - 02/07/2025<a href="#109---02072025" class="hash-link" aria-label="Direct link to 1.0.9 - 02/07/2025" title="Direct link to 1.0.9 - 02/07/2025" translate="no">​</a></h3>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="maintenance">Maintenance<a href="#maintenance" class="hash-link" aria-label="Direct link to Maintenance" title="Direct link to Maintenance" translate="no">​</a></h5>
+<p>Updated ProActions Core and AI-Kit to version 1.0.12 for Prime Panel.</p>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="108---30062025">1.0.8 - 30/06/2025<a href="#108---30062025" class="hash-link" aria-label="Direct link to 1.0.8 - 30/06/2025" title="Direct link to 1.0.8 - 30/06/2025" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="improvements-1">Improvements<a href="#improvements-1" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="youtube-api-integration">YouTube API Integration<a href="#youtube-api-integration" class="hash-link" aria-label="Direct link to YouTube API Integration" title="Direct link to YouTube API Integration" translate="no">​</a></h5>
+<ul>
+<li class="">Added optional thumbnail upload to YouTube Video upload.</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="maintenance-1">Maintenance<a href="#maintenance-1" class="hash-link" aria-label="Direct link to Maintenance" title="Direct link to Maintenance" translate="no">​</a></h5>
+<ul>
+<li class="">Updated libraries and dependencies.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="107---28042025">1.0.7 - 28/04/2025<a href="#107---28042025" class="hash-link" aria-label="Direct link to 1.0.7 - 28/04/2025" title="Direct link to 1.0.7 - 28/04/2025" translate="no">​</a></h3>
+<p>We&#x27;re excited to announce the release of ProActions Hub 1.0.7, featuring significant new capabilities and improvements to enhance your workflow integration with external services.</p>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="new-features-2">New Features<a href="#new-features-2" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="youtube-api-integration-1">YouTube API Integration<a href="#youtube-api-integration-1" class="hash-link" aria-label="Direct link to YouTube API Integration" title="Direct link to YouTube API Integration" translate="no">​</a></h5>
+<ul>
+<li class="">Added comprehensive YouTube API support for authentication and video upload</li>
+<li class="">Enables seamless content publishing directly to YouTube from within Swing workflows</li>
+<li class="">Supports standard OAuth authentication flow for secure access to YouTube accounts</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="prime-panel-beta">Prime Panel (Beta)<a href="#prime-panel-beta" class="hash-link" aria-label="Direct link to Prime Panel (Beta)" title="Direct link to Prime Panel (Beta)" translate="no">​</a></h5>
+<ul>
+<li class="">Introduced beta support for the new Prime Panel</li>
+<li class="">Allows ProActions workflows to be used directly from the Prime interface</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="json-logging">JSON Logging<a href="#json-logging" class="hash-link" aria-label="Direct link to JSON Logging" title="Direct link to JSON Logging" translate="no">​</a></h5>
+<ul>
+<li class="">Implemented structured JSON logging for improved log analysis and monitoring</li>
+<li class="">Enhances debugging capabilities and system observability</li>
+<li class="">This allows a direct integration with <strong>Méthode Logging Platform</strong></li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="tls-encryption-support">TLS Encryption Support<a href="#tls-encryption-support" class="hash-link" aria-label="Direct link to TLS Encryption Support" title="Direct link to TLS Encryption Support" translate="no">​</a></h5>
+<ul>
+<li class="">Added native TLS/SSL encryption for secure communication</li>
+<li class="">Ensures data transmitted between ProActions Hub and external services remains private</li>
+<li class="">Configurable through the config.yaml configuration file</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="swagger-documentation">Swagger Documentation<a href="#swagger-documentation" class="hash-link" aria-label="Direct link to Swagger Documentation" title="Direct link to Swagger Documentation" translate="no">​</a></h5>
+<ul>
+<li class="">Integrated Swagger UI for comprehensive API documentation</li>
+<li class="">Provides interactive exploration of ProActions Hub API endpoints</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_zIqo" id="expanded-llm-provider-support">Expanded LLM Provider Support<a href="#expanded-llm-provider-support" class="hash-link" aria-label="Direct link to Expanded LLM Provider Support" title="Direct link to Expanded LLM Provider Support" translate="no">​</a></h5>
+<ul>
+<li class="">Added support for five new LLM/AI service providers:<!-- -->
+<ul>
+<li class="">Cortex</li>
+<li class="">Nebius</li>
+<li class="">Recraft-AI</li>
+<li class="">Milvus</li>
+<li class="">Replicate</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="improvements-2">Improvements<a href="#improvements-2" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h4>
+<ul>
+<li class="">Added the ability to customize the cookie name used for authentication</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="106---13122024">1.0.6 - 13/12/2024<a href="#106---13122024" class="hash-link" aria-label="Direct link to 1.0.6 - 13/12/2024" title="Direct link to 1.0.6 - 13/12/2024" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="new-features-3">New Features<a href="#new-features-3" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Support for Additional AI Services</strong>:<!-- -->
+<ul>
+<li class=""><strong>xAI Grok API</strong>: Added integration for xAI Grok, expanding the range of supported AI services.</li>
+<li class=""><strong>Lambda Labs</strong>: Enabled support for workflows using Lambda Labs.</li>
+<li class=""><strong>DashScope</strong>: Integrated DashScope, allowing seamless interaction with its capabilities.</li>
+<li class=""><strong>SageMaker</strong>: Added support for AWS SageMaker, enhancing machine learning workflow options.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="improvements-3">Improvements<a href="#improvements-3" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Enhanced Error Handling</strong>:<!-- -->
+<ul>
+<li class="">Improved handling of remote service errors by including the original error details in response messages. This provides better transparency and debugging information.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_zIqo" id="maintenance-2">Maintenance<a href="#maintenance-2" class="hash-link" aria-label="Direct link to Maintenance" title="Direct link to Maintenance" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Docker Image Update</strong>:<!-- -->
+<ul>
+<li class="">Updated the Docker image to use <strong>Node.js v20</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="104---01102024">1.0.4 - 01/10/2024<a href="#104---01102024" class="hash-link" aria-label="Direct link to 1.0.4 - 01/10/2024" title="Direct link to 1.0.4 - 01/10/2024" translate="no">​</a></h3>
+<ul>
+<li class="">Support for additional providers<!-- -->
+<ul>
+<li class="">azure-ai</li>
+<li class="">huggingface</li>
+<li class="">deepseek</li>
+<li class="">predibase</li>
+<li class="">triton</li>
+<li class="">voyage</li>
+<li class="">github</li>
+<li class="">deepbricks</li>
+<li class="">siliconflow</li>
+<li class="">cerebras</li>
+<li class="">inference-net</li>
+<li class="">sambanova</li>
+<li class="">upstage</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="103---30092024">1.0.3 - 30/09/2024<a href="#103---30092024" class="hash-link" aria-label="Direct link to 1.0.3 - 30/09/2024" title="Direct link to 1.0.3 - 30/09/2024" translate="no">​</a></h3>
+<ul>
+<li class="">Fixed http communication issue with invalid responses.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_zIqo" id="102---20092024">1.0.2 - 20/09/2024<a href="#102---20092024" class="hash-link" aria-label="Direct link to 1.0.2 - 20/09/2024" title="Direct link to 1.0.2 - 20/09/2024" translate="no">​</a></h3>
+<ul>
+<li class="">Added private key authentication for Google Vertex AI.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/proactions-docs/hub/configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Setup &amp; Configuration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/proactions-docs/hub/mcp-gateway"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">MCP Gateway</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_P0JP thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#120---05022026" class="table-of-contents__link toc-highlight">1.2.0 - 05/02/2026</a></li><li><a href="#110---11112025" class="table-of-contents__link toc-highlight">1.1.0 - 11/11/2025</a></li><li><a href="#109---02072025" class="table-of-contents__link toc-highlight">1.0.9 - 02/07/2025</a></li><li><a href="#108---30062025" class="table-of-contents__link toc-highlight">1.0.8 - 30/06/2025</a></li><li><a href="#107---28042025" class="table-of-contents__link toc-highlight">1.0.7 - 28/04/2025</a></li><li><a href="#106---13122024" class="table-of-contents__link toc-highlight">1.0.6 - 13/12/2024</a></li><li><a href="#104---01102024" class="table-of-contents__link toc-highlight">1.0.4 - 01/10/2024</a></li><li><a href="#103---30092024" class="table-of-contents__link toc-highlight">1.0.3 - 30/09/2024</a></li><li><a href="#102---20092024" class="table-of-contents__link toc-highlight">1.0.2 - 20/09/2024</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Eidosmedia. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Built-in AI Tools Reference | ProActions Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://em-al-wi.github.io/proactions-docs-next/guides/configuration/builtin-ai-tools"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Built-in AI Tools Reference | ProActions Documentation"><meta data-rh="true" name="description" content="Complete reference for all built-in AI tools available in ProActions."><meta data-rh="true" property="og:description" content="Complete reference for all built-in AI tools available in ProActions."><link data-rh="true" rel="icon" href="/proactions-docs-next/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://em-al-wi.github.io/proactions-docs-next/guides/configuration/builtin-ai-tools"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs-next/guides/configuration/builtin-ai-tools" hreflang="en"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs-next/guides/configuration/builtin-ai-tools" hreflang="x-default"><link rel="stylesheet" href="/proactions-docs-next/assets/css/styles.301f5519.css">
-<script src="/proactions-docs-next/assets/js/runtime~main.cac721af.js" defer="defer"></script>
-<script src="/proactions-docs-next/assets/js/main.b84880de.js" defer="defer"></script>
+<script src="/proactions-docs-next/assets/js/runtime~main.5598eac7.js" defer="defer"></script>
+<script src="/proactions-docs-next/assets/js/main.d7df9bce.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -17,6 +17,7 @@
 <p>ProActions provides pre-configured tools that can be easily enabled for AI function calling.
 These tools provide direct access to document manipulation, user interaction, and metadata without
 requiring you to write custom function definitions.</p>
+<p><strong>StoryEditor</strong> is the curated, task-level surface for editorial agents — safe validated text edits, named document fields, and visual marks, with your document&#x27;s xpaths and safety rules configured once via <code>config:</code>. <strong>ContentTools</strong> and <strong>HighlightTools</strong> remain the stable read/write primitives underneath it. These tools work identically in <code>OPENAI_COMPLETION</code>/<code>HUB_COMPLETION</code> and in voice agents — see the <a class="" href="/proactions-docs-next/guides/configuration/voice-agents">Voice Agents guide</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="configuration">Configuration<a href="#configuration" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h2>
 <p>Enable tools in your workflow step configuration:</p>
 <div class="language-yaml codeBlockContainer_Y8r4 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_lnBu"><pre tabindex="0" class="prism-code language-yaml codeBlock_UxS_ thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p5_E"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">step</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> HUB_COMPLETION</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">instruction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;Analyze this document&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">builtinTools</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> ContentTools          </span><span class="token comment" style="color:#999988;font-style:italic"># Enable all tools in this class</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> DocumentInfoTools     </span><span class="token comment" style="color:#999988;font-style:italic"># Enable all tools in this class</span><br></span></code></pre></div></div>
@@ -51,43 +52,51 @@ requiring you to write custom function definitions.</p>
 <li class="">Runtime arguments are merged with fixed defaults, where fixed values win.</li>
 <li class="">With <code>toolStrict: true</code>, overriding fixed top-level arguments is rejected.</li>
 </ul>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="conditional-tools-when">Conditional Tools (<code>when</code>)<a href="#conditional-tools-when" class="hash-link" aria-label="Direct link to conditional-tools-when" title="Direct link to conditional-tools-when" translate="no">​</a></h3>
+<p>Object entries (<code>class</code>, <code>alias</code>, and <code>mcp</code> forms) support an optional <code>when</code> condition — a template expression or boolean evaluated once when the request or voice session is built. When it resolves falsy, the tools are neither advertised to the model nor executable:</p>
+<div class="language-yaml codeBlockContainer_Y8r4 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_lnBu"><pre tabindex="0" class="prism-code language-yaml codeBlock_UxS_ thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p5_E"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">builtinTools</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">alias</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> setHeadline</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">target</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> replaceTextAtXpath</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">args</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">xpath</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;/doc/story/headline&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">when</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;{{ not client.isReadonly() }}&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">class</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> ContentTools</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">only</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain">getSelectedText</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">when</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;{{ client.isTextSelected() }}&quot;</span><br></span></code></pre></div></div>
+<p>See <a class="" href="/proactions-docs-next/guides/configuration/ai-integration#conditional-tool-exposure-when">Conditional Tool Exposure</a> in the AI Integration guide for evaluation semantics.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="provider-configuration-config">Provider Configuration (<code>config</code>)<a href="#provider-configuration-config" class="hash-link" aria-label="Direct link to provider-configuration-config" title="Direct link to provider-configuration-config" translate="no">​</a></h3>
+<p>Class entries accept a <code>config:</code> block, validated against the provider&#x27;s declared configuration options (unknown keys warn but never fail). Values support template expressions — resolved once when the request or voice session is built, with access to flowContext, <code>client.*</code>, and <code>global</code>/<code>imports</code> block constants:</p>
+<div class="language-yaml codeBlockContainer_Y8r4 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_lnBu"><pre tabindex="0" class="prism-code language-yaml codeBlock_UxS_ thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_p5_E"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">builtinTools</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">class</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> StoryEditor</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">only</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain">searchAndReplaceText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> appendParagraph</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> getField</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> setField</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">config</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">bodyXpath</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;{{ imports.env.doc.body }}&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">allowedElements</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain">p</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> h2</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> h3</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> ul</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> li</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> i</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> u</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">fields</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">headline</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;/doc/story/grouphead/headline/p&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">summary</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;/doc/story/summary/p&quot;</span><br></span></code></pre></div></div>
+<p>Each provider&#x27;s options are documented in its <strong>Configuration</strong> section below. See <a class="" href="/proactions-docs-next/guides/configuration/ai-integration#configuring-built-in-tools-config">Configuring Built-in Tools</a> in the AI Integration guide for the full semantics.</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="contenttools">ContentTools<a href="#contenttools" class="hash-link" aria-label="Direct link to ContentTools" title="Direct link to ContentTools" translate="no">​</a></h2>
-<p>Tools for reading and writing document content</p>
+<p>Stable read/write primitives for the current document: full-document and selection reads, cursor-anchored paragraph access, and exact-xpath operations. For task-level editorial work (safe edits, named fields, marks) prefer the StoryEditor provider.</p>
 <h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools">Tools<a href="#tools" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="gettextcontent"><code>getTextContent</code><a href="#gettextcontent" class="hash-link" aria-label="Direct link to gettextcontent" title="Direct link to gettextcontent" translate="no">​</a></h4>
-<p>Get the text content of the current document</p>
+<p>Read the full document as plain text. The primary read for answering questions about or quoting from the current document.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>options</code> | <code>object</code> | No | Options for text extraction (optional) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getxmlcontent"><code>getXmlContent</code><a href="#getxmlcontent" class="hash-link" aria-label="Direct link to getxmlcontent" title="Direct link to getxmlcontent" translate="no">​</a></h4>
-<p>Get the XML content of the current document</p>
+<p>Read the full document as raw XML including all markup. Use only when document structure matters — for plain content use getTextContent.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>options</code> | <code>object</code> | No | Options for XML extraction (optional) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getselectedtext"><code>getSelectedText</code><a href="#getselectedtext" class="hash-link" aria-label="Direct link to getselectedtext" title="Direct link to getselectedtext" translate="no">​</a></h4>
-<p>Get the currently selected text in the editor</p>
+<p>Get the text the user has currently selected in the editor. Returns empty when nothing is selected — check isTextSelected first when the selection state is unknown.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getselectedxml"><code>getSelectedXML</code><a href="#getselectedxml" class="hash-link" aria-label="Direct link to getselectedxml" title="Direct link to getselectedxml" translate="no">​</a></h4>
-<p>Get the XML of the currently selected content</p>
+<p>Get the raw XML of the user&#x27;s current selection, including markup. For plain text use getSelectedText.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getparagraphtext"><code>getParagraphText</code><a href="#getparagraphtext" class="hash-link" aria-label="Direct link to getparagraphtext" title="Direct link to getparagraphtext" translate="no">​</a></h4>
-<p>Get the text of the current paragraph where the cursor is located</p>
+<p>CURSOR-ANCHORED: returns the text of only the paragraph the cursor is in — not the whole document. Use when the user refers to &quot;this paragraph&quot;.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getparagraphxml"><code>getParagraphXML</code><a href="#getparagraphxml" class="hash-link" aria-label="Direct link to getparagraphxml" title="Direct link to getparagraphxml" translate="no">​</a></h4>
-<p>Get the XML of the current paragraph where the cursor is located</p>
+<p>CURSOR-ANCHORED: returns the raw XML of only the paragraph the cursor is in. For plain text use getParagraphText.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getxmlatxpath"><code>getXmlAtXpath</code><a href="#getxmlatxpath" class="hash-link" aria-label="Direct link to getxmlatxpath" title="Direct link to getxmlatxpath" translate="no">​</a></h4>
-<p>Get XML content at a specific XPath location</p>
+<p>Low-level primitive: read raw XML at an exact document xpath. Requires knowing the document structure.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xpath</code> | <code>string</code> | Yes | XPath expression to locate the content |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="gettextatxpath"><code>getTextAtXpath</code><a href="#gettextatxpath" class="hash-link" aria-label="Direct link to gettextatxpath" title="Direct link to gettextatxpath" translate="no">​</a></h4>
-<p>Get text content at a specific XPath location</p>
+<p>Low-level primitive: read plain text at an exact document xpath. Requires knowing the document structure.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xpath</code> | <code>string</code> | Yes | XPath expression to locate the content |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="istextselected"><code>isTextSelected</code><a href="#istextselected" class="hash-link" aria-label="Direct link to istextselected" title="Direct link to istextselected" translate="no">​</a></h4>
-<p>Check if any text is currently selected in the editor</p>
+<p>Check whether the user currently has text selected. Call this before selection-based tools when the selection state is unknown.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getselectedelement"><code>getSelectedElement</code><a href="#getselectedelement" class="hash-link" aria-label="Direct link to getselectedelement" title="Direct link to getselectedelement" translate="no">​</a></h4>
 <p>Get the name of the currently selected XML element</p>
@@ -96,47 +105,47 @@ requiring you to write custom function definitions.</p>
 <p>Get the XPath of the currently selected element</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getcontainertextcontent"><code>getContainerTextContent</code><a href="#getcontainertextcontent" class="hash-link" aria-label="Direct link to getcontainertextcontent" title="Direct link to getcontainertextcontent" translate="no">​</a></h4>
-<p>Get text content from the container (for container documents)</p>
+<p>CONTAINER DOCUMENTS ONLY: read the aggregated text content of the container.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getcontainerxmlcontents"><code>getContainerXmlContents</code><a href="#getcontainerxmlcontents" class="hash-link" aria-label="Direct link to getcontainerxmlcontents" title="Direct link to getcontainerxmlcontents" translate="no">​</a></h4>
-<p>Get XML contents from all items in the container</p>
+<p>CONTAINER DOCUMENTS ONLY: read each contained item with its metadata and XML.</p>
 <p><strong>Parameters:</strong> None</p>
 <p><strong>Returns:</strong> Array of items, each with the item metadata and its XML string</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="inserttextatcursor"><code>insertTextAtCursor</code><a href="#inserttextatcursor" class="hash-link" aria-label="Direct link to inserttextatcursor" title="Direct link to inserttextatcursor" translate="no">​</a></h4>
-<p>Insert text at the current cursor position</p>
+<p>CURSOR-ANCHORED write: insert plain text at the current cursor position.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>text</code> | <code>string</code> | Yes | Text to insert |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="inserttextatxpath"><code>insertTextAtXpath</code><a href="#inserttextatxpath" class="hash-link" aria-label="Direct link to inserttextatxpath" title="Direct link to inserttextatxpath" translate="no">​</a></h4>
-<p>Insert text at a specific XPath location</p>
+<p>Low-level primitive: insert plain text at an exact document xpath. Requires knowing the document structure.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>text</code> | <code>string</code> | Yes | Text to insert |</p>
 <p>| <code>xpath</code> | <code>string</code> | Yes | XPath expression for insertion location |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="insertxmlatcursor"><code>insertXmlAtCursor</code><a href="#insertxmlatcursor" class="hash-link" aria-label="Direct link to insertxmlatcursor" title="Direct link to insertxmlatcursor" translate="no">​</a></h4>
-<p>Insert XML at the current cursor position</p>
+<p>CURSOR-ANCHORED write: insert raw XML at the cursor. The XML is written as-is — ensure it is well-formed and uses only elements valid at that location.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xml</code> | <code>string</code> | Yes | XML content to insert |</p>
 <p>| <code>insertType</code> | <code>string</code> | No | How to insert the XML (insertInline, insertBefore, insertAfter) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="insertxmlatxpath"><code>insertXmlAtXpath</code><a href="#insertxmlatxpath" class="hash-link" aria-label="Direct link to insertxmlatxpath" title="Direct link to insertxmlatxpath" translate="no">​</a></h4>
-<p>Insert XML at a specific XPath location</p>
+<p>Low-level primitive: insert raw XML at an exact xpath. The XML is written as-is — ensure it is well-formed and uses only elements valid at that location.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xml</code> | <code>string</code> | Yes | XML content to insert |</p>
 <p>| <code>xpath</code> | <code>string</code> | Yes | XPath expression for insertion location |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="replacetextatcursor"><code>replaceTextAtCursor</code><a href="#replacetextatcursor" class="hash-link" aria-label="Direct link to replacetextatcursor" title="Direct link to replacetextatcursor" translate="no">​</a></h4>
-<p>Replace the selected text at cursor with new text</p>
+<p>SELECTION-ANCHORED write: replaces the user&#x27;s current selection with new plain text. Requires an active selection.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>text</code> | <code>string</code> | Yes | New text to replace selection |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="replacetextatcursorparagraph"><code>replaceTextAtCursorParagraph</code><a href="#replacetextatcursorparagraph" class="hash-link" aria-label="Direct link to replacetextatcursorparagraph" title="Direct link to replacetextatcursorparagraph" translate="no">​</a></h4>
-<p>Replace the entire paragraph at cursor with new text</p>
+<p>CURSOR-ANCHORED write: replaces the entire paragraph the cursor is in with new plain text.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>text</code> | <code>string</code> | Yes | New text to replace paragraph |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="replacetextatxpath"><code>replaceTextAtXpath</code><a href="#replacetextatxpath" class="hash-link" aria-label="Direct link to replacetextatxpath" title="Direct link to replacetextatxpath" translate="no">​</a></h4>
-<p>Replace text at a specific XPath location</p>
+<p>Low-level primitive: replace plain text at an exact document xpath. Requires knowing the document structure.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>text</code> | <code>string</code> | Yes | New text |</p>
@@ -152,7 +161,7 @@ requiring you to write custom function definitions.</p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xml</code> | <code>string</code> | Yes | New XML to replace paragraph |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="replacexmlatxpath"><code>replaceXmlAtXpath</code><a href="#replacexmlatxpath" class="hash-link" aria-label="Direct link to replacexmlatxpath" title="Direct link to replacexmlatxpath" translate="no">​</a></h4>
-<p>Replace XML at a specific XPath location</p>
+<p>Low-level primitive: replace raw XML at an exact xpath. The XML is written as-is — ensure it is well-formed; a malformed write can corrupt the document.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>xml</code> | <code>string</code> | Yes | New XML content |</p>
@@ -277,17 +286,17 @@ requiring you to write custom function definitions.</p>
 <p>Get the workfolder of the current document</p>
 <p><strong>Parameters:</strong> None</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="feedbacktools">FeedbackTools<a href="#feedbacktools" class="hash-link" aria-label="Direct link to FeedbackTools" title="Direct link to FeedbackTools" translate="no">​</a></h2>
-<p>Tools for providing feedback and progress updates to the user</p>
+<p>Tools for showing progress, results, and structured data to the user in the Flow Execution Monitor.</p>
 <h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-4">Tools<a href="#tools-4" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="addfeedback"><code>addFeedback</code><a href="#addfeedback" class="hash-link" aria-label="Direct link to addfeedback" title="Direct link to addfeedback" translate="no">​</a></h4>
-<p>Add a feedback message to the execution monitor</p>
+<p>Show a message in the execution monitor. Content is rendered as markdown. Use type &quot;status&quot;/&quot;info&quot; for progress notes and &quot;success&quot;/&quot;warning&quot;/&quot;error&quot; for outcomes.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>type</code> | <code>string</code> | Yes | Type of feedback |</p>
 <p>| <code>content</code> | <code>string</code> | Yes | Feedback message content |</p>
 <p>| <code>metadata</code> | <code>object</code> | No | Optional metadata for the feedback |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="updateprogress"><code>updateProgress</code><a href="#updateprogress" class="hash-link" aria-label="Direct link to updateprogress" title="Direct link to updateprogress" translate="no">​</a></h4>
-<p>Update progress with a percentage (0-100)</p>
+<p>Update the monitor progress bar (0-100). Use during long multi-step work so the user sees movement.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>percentage</code> | <code>number</code> | Yes | Completion percentage (0-100) |</p>
@@ -300,33 +309,33 @@ requiring you to write custom function definitions.</p>
 <p>| <code>title</code> | <code>string</code> | No | Optional table title |</p>
 <p>| <code>options</code> | <code>object</code> | No | Display options (e.g., maxRows) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="addjsonfeedback"><code>addJsonFeedback</code><a href="#addjsonfeedback" class="hash-link" aria-label="Direct link to addjsonfeedback" title="Direct link to addjsonfeedback" translate="no">​</a></h4>
-<p>Display data as formatted JSON in the monitor</p>
+<p>Display raw structured data as formatted JSON in the monitor. For human-readable results prefer addFeedback (markdown) or addTableFeedback.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>data</code> | <code>object</code> | Yes | Data to display as JSON (object or array) |</p>
 <p>| <code>title</code> | <code>string</code> | No | Optional title |</p>
 <p>| <code>options</code> | <code>object</code> | No | Display options (e.g., maxDepth) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="addkeyvaluefeedback"><code>addKeyValueFeedback</code><a href="#addkeyvaluefeedback" class="hash-link" aria-label="Direct link to addkeyvaluefeedback" title="Direct link to addkeyvaluefeedback" translate="no">​</a></h4>
-<p>Display key-value pairs in the monitor</p>
+<p>Display key-value pairs in the monitor — ideal for small fact sheets (e.g. author, date, status).</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>data</code> | <code>object</code> | Yes | Key-value pairs to display |</p>
 <p>| <code>title</code> | <code>string</code> | No | Optional title |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="addmetricsfeedback"><code>addMetricsFeedback</code><a href="#addmetricsfeedback" class="hash-link" aria-label="Direct link to addmetricsfeedback" title="Direct link to addmetricsfeedback" translate="no">​</a></h4>
-<p>Display metrics (numbers with labels) in the monitor. Provide metrics as a key-value object.</p>
+<p>Display numeric scores with labels in the monitor. Use for metrics and ratings; for arbitrary facts use addKeyValueFeedback.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>metrics</code> | <code>object</code> | Yes | Metrics to display as key-value pairs (object: <code>{label: value}</code>) |</p>
 <p>| <code>title</code> | <code>string</code> | No | Optional title |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="shownotification"><code>showNotification</code><a href="#shownotification" class="hash-link" aria-label="Direct link to shownotification" title="Direct link to shownotification" translate="no">​</a></h4>
-<p>Show a notification to the user</p>
+<p>Show a system notification outside the monitor. Use sparingly for important outcomes — routine progress belongs in addFeedback.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>type</code> | <code>string</code> | Yes | Notification type |</p>
 <p>| <code>message</code> | <code>string</code> | Yes | Notification message |</p>
 <p>| <code>title</code> | <code>string</code> | No | Optional notification title |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="highlighttextsegments"><code>highlightTextSegments</code><a href="#highlighttextsegments" class="hash-link" aria-label="Direct link to highlighttextsegments" title="Direct link to highlighttextsegments" translate="no">​</a></h4>
-<p>Highlight text segments by matching their content in the document, then adding pure text tags.</p>
+<p>Highlight text segments in the document by MATCHING THEIR CONTENT — no offsets needed. The preferred way to visually mark text; matching tolerance (case, whitespace) is configurable per segment.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>segments</code> | <code>array</code> | Yes | Segments to highlight |</p>
@@ -335,25 +344,81 @@ requiring you to write custom function definitions.</p>
 <p>| <code>match</code> | <code>object</code> | No | Override match options to apply to all segments |</p>
 <p>| <code>attributes</code> | <code>object</code> | No | Override attributes to apply to all segments |</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="highlighttools">HighlightTools<a href="#highlighttools" class="hash-link" aria-label="Direct link to HighlightTools" title="Direct link to HighlightTools" translate="no">​</a></h2>
-<p>Tools for marking and highlighting text content</p>
+<p>Low-level text-tagging primitives operating on the document&#x27;s normalized pure text. For marking text by content, prefer highlightTextSegments (FeedbackTools) or markSegments (StoryEditor).</p>
 <h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-5">Tools<a href="#tools-5" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getpuretext"><code>getPureText</code><a href="#getpuretext" class="hash-link" aria-label="Direct link to getpuretext" title="Direct link to getpuretext" translate="no">​</a></h4>
-<p>Get the pure text content of the document or report without any formatting or markup</p>
+<p>Read the document as normalized plain text without markup. This is the exact text that pure-text tag offsets are computed against — read it before using addPureTextTags.</p>
 <p><strong>Parameters:</strong> None</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="addpuretexttags"><code>addPureTextTags</code><a href="#addpuretexttags" class="hash-link" aria-label="Direct link to addpuretexttags" title="Direct link to addpuretexttags" translate="no">​</a></h4>
-<p>Add tags to pure text content</p>
+<p>OFFSET-LEVEL primitive: add tags at character offsets into the pure text. Offsets must be computed against getPureText exactly — prefer highlightTextSegments, which matches by text content instead of offsets.</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>tags</code> | <code>array</code> | Yes | Array of tags to add |</p>
 <p>| <code>virtual</code> | <code>boolean</code> | No | Whether tags are virtual and will not be persisted(optional) |</p>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="clearpuretexttags"><code>clearPureTextTags</code><a href="#clearpuretexttags" class="hash-link" aria-label="Direct link to clearpuretexttags" title="Direct link to clearpuretexttags" translate="no">​</a></h4>
-<p>Clear specific tags from a document or report</p>
+<p>Remove all tags with the given names from the document pure text (e.g. to clear highlights added earlier).</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
 <p>| <code>tags</code> | <code>array</code> | Yes | Array of tags to be removed |</p>
+<h2 class="anchor anchorTargetStickyNavbar_vs49" id="storyeditor">StoryEditor<a href="#storyeditor" class="hash-link" aria-label="Direct link to StoryEditor" title="Direct link to StoryEditor" translate="no">​</a></h2>
+<p>Task-level tools for reading, editing, and annotating the current story. The preferred tool surface for editorial agents — safe validated edits, named document fields, and visual marks.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="configuration-1">Configuration<a href="#configuration-1" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<p>Set via the <code>config:</code> block on the <code>builtinTools</code> class entry:</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>bodyXpath</code></td><td><code>string</code></td><td><code>&quot;/doc/story&quot;</code></td><td>XPath of the content root that searchAndReplaceText reads and writes</td></tr><tr><td><code>appendXpath</code></td><td><code>string</code></td><td><code>&quot;/doc/story/text&quot;</code></td><td>XPath of the element appendParagraph inserts new paragraphs into</td></tr><tr><td><code>allowedElements</code></td><td><code>array</code></td><td><code>[&quot;p&quot;,&quot;h2&quot;,&quot;h3&quot;,&quot;ul&quot;,&quot;li&quot;,&quot;b&quot;,&quot;i&quot;,&quot;u&quot;]</code></td><td>XML elements allowed in searchAndReplaceText replacement content</td></tr><tr><td><code>inlineElements</code></td><td><code>array</code></td><td><code>[&quot;b&quot;,&quot;i&quot;,&quot;u&quot;]</code></td><td>Inline formatting elements allowed in appendParagraph text</td></tr><tr><td><code>fields</code></td><td><code>object</code></td><td>—</td><td>Map of semantic field names to xpaths (e.g. headline: /doc/story/grouphead/headline/p). Generates the getField/setField tools with the field names as an enum; both tools are dropped when no fields are configured.</td></tr><tr><td><code>markTag</code></td><td><code>string</code></td><td><code>&quot;mark&quot;</code></td><td>Tag name used by markSegments/clearMarks</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-6">Tools<a href="#tools-6" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="readstory"><code>readStory</code><a href="#readstory" class="hash-link" aria-label="Direct link to readstory" title="Direct link to readstory" translate="no">​</a></h4>
+<p>Read the current story as plain text. Use this before answering questions about the story and before any edit, so search strings can be copied exactly from the article.</p>
+<p><strong>Parameters:</strong> None</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="readselection"><code>readSelection</code><a href="#readselection" class="hash-link" aria-label="Direct link to readselection" title="Direct link to readselection" translate="no">​</a></h4>
+<p>Get the text the user has currently selected in the editor. Use when the user refers to &quot;this&quot;, &quot;the selected text&quot;, or &quot;what I marked&quot;. Returns empty when nothing is selected.</p>
+<p><strong>Parameters:</strong> None</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="readcurrentparagraph"><code>readCurrentParagraph</code><a href="#readcurrentparagraph" class="hash-link" aria-label="Direct link to readcurrentparagraph" title="Direct link to readcurrentparagraph" translate="no">​</a></h4>
+<p>Get the text of the paragraph the user&#x27;s cursor is in. ONLY useful when the user refers to &quot;this paragraph&quot; or &quot;the current paragraph&quot; — for any other location use readStory.</p>
+<p><strong>Parameters:</strong> None</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="replacecurrentparagraph"><code>replaceCurrentParagraph</code><a href="#replacecurrentparagraph" class="hash-link" aria-label="Direct link to replacecurrentparagraph" title="Direct link to replacecurrentparagraph" translate="no">​</a></h4>
+<p>Replace the full text of the paragraph the user&#x27;s cursor is in. ONLY works on that one paragraph — for edits anywhere else in the story use searchAndReplaceText.</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>text</code> | <code>string</code> | Yes | New text for the paragraph |</p>
+<p><strong>Returns:</strong> JSON: { success: true }</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="searchandreplacetext"><code>searchAndReplaceText</code><a href="#searchandreplacetext" class="hash-link" aria-label="Direct link to searchandreplacetext" title="Direct link to searchandreplacetext" translate="no">​</a></h4>
+<p>The preferred way to change article text — use this for removing, rewriting, or correcting any sentence or segment in the story. Use an empty replace string to delete the found text. Searches for an exact string and replaces its first occurrence. The search string must appear verbatim in the article — copy it exactly from the story text (or from the raw story XML when the search needs to include tags for structural changes). The replacement is validated before it is applied; if it would break the document, nothing is changed and an error with a hint is returned. Returns { found, success } plus error/hint details on rejection.</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>search</code> | <code>string</code> | Yes | Exact text to find (copied verbatim from the article, may include XML tags) |</p>
+<p>| <code>replace</code> | <code>string</code> | Yes | Replacement text (empty string deletes the found text) |</p>
+<p><strong>Returns:</strong> JSON: { found, success, error?, hint? } — on rejection the document is unchanged</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="appendparagraph"><code>appendParagraph</code><a href="#appendparagraph" class="hash-link" aria-label="Direct link to appendparagraph" title="Direct link to appendparagraph" translate="no">​</a></h4>
+<p>Append the given text as a new paragraph at the end of the story. Inline formatting tags (by default &lt;b&gt;, &lt;i&gt;, &lt;u&gt;) are allowed. Invalid markup is stripped automatically and the text is inserted as plain content (reported via note: &#x27;invalid_markup_stripped&#x27;).</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>text</code> | <code>string</code> | Yes | Paragraph text, optionally with allowed inline formatting tags |</p>
+<p><strong>Returns:</strong> JSON: { success, note?, error?, hint? } — note &#x27;invalid_markup_stripped&#x27; when markup was removed</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="getfield"><code>getField</code><a href="#getfield" class="hash-link" aria-label="Direct link to getfield" title="Direct link to getfield" translate="no">​</a></h4>
+<p>Read the text value of a named document field. Use this for the listed fields instead of xpath-based reads.</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>name</code> | <code>string</code> | Yes | Field name (see the listed available fields) |</p>
+<p><strong>Returns:</strong> The field text, or JSON { error: &quot;unknown_field&quot;, hint } for unconfigured fields</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="setfield"><code>setField</code><a href="#setfield" class="hash-link" aria-label="Direct link to setfield" title="Direct link to setfield" translate="no">​</a></h4>
+<p>Replace the text value of a named document field. Text-level write — use this for the listed fields instead of xpath-based or search-and-replace edits.</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>name</code> | <code>string</code> | Yes | Field name (see the listed available fields) |</p>
+<p>| <code>text</code> | <code>string</code> | Yes | New text value for the field |</p>
+<p><strong>Returns:</strong> JSON: { success, field } or { error: &quot;unknown_field&quot;, hint } for unconfigured fields</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="marksegments"><code>markSegments</code><a href="#marksegments" class="hash-link" aria-label="Direct link to marksegments" title="Direct link to marksegments" translate="no">​</a></h4>
+<p>Visually highlight text segments in the story (e.g. to show the user which sentences you propose to change). Does NOT modify the content. Matching is whitespace- and case-tolerant; pass the exact text of each segment as it appears in the story.</p>
+<p><strong>Parameters:</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
+<p>| <code>segments</code> | <code>array</code> | Yes | Segments to mark |</p>
+<p><strong>Returns:</strong> JSON result of the marking operation</p>
+<h4 class="anchor anchorTargetStickyNavbar_vs49" id="clearmarks"><code>clearMarks</code><a href="#clearmarks" class="hash-link" aria-label="Direct link to clearmarks" title="Direct link to clearmarks" translate="no">​</a></h4>
+<p>Remove all highlight marks previously added with markSegments.</p>
+<p><strong>Parameters:</strong> None</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="hubmcp">HubMcp<a href="#hubmcp" class="hash-link" aria-label="Direct link to HubMcp" title="Direct link to HubMcp" translate="no">​</a></h2>
 <p>Generic passthrough for invoking MCP tools via the Hub when a specific server/tool pair is not pre-configured as an alias.</p>
-<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-6">Tools<a href="#tools-6" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-7">Tools<a href="#tools-7" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="callmcptool"><code>callMcpTool</code><a href="#callmcptool" class="hash-link" aria-label="Direct link to callmcptool" title="Direct link to callmcptool" translate="no">​</a></h4>
 <p>Execute a tool on an MCP server via the Hub</p>
 <p><strong>Parameters:</strong></p>
@@ -364,7 +429,7 @@ requiring you to write custom function definitions.</p>
 <p><strong>Returns:</strong> Tool result as JSON string (or raw string if the MCP tool returned a string)</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="tooldiscovery">ToolDiscovery<a href="#tooldiscovery" class="hash-link" aria-label="Direct link to ToolDiscovery" title="Direct link to ToolDiscovery" translate="no">​</a></h2>
 <p>Meta-tools used by the autoDiscoverTools flow to list available providers and activate them on demand during a completion.</p>
-<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-7">Tools<a href="#tools-7" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-8">Tools<a href="#tools-8" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="listavailabletools"><code>listAvailableTools</code><a href="#listavailabletools" class="hash-link" aria-label="Direct link to listavailabletools" title="Direct link to listavailabletools" translate="no">​</a></h4>
 <p>List all available tool providers and their tools. Returns a catalog with provider names, descriptions, and tool details. Use this to discover what tools can be activated for the current session.</p>
 <p><strong>Parameters:</strong></p>
@@ -379,7 +444,7 @@ requiring you to write custom function definitions.</p>
 <p><strong>Returns:</strong> JSON: { activated: string[], toolCount: number, skipped?: string[] }</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="userinfotools">UserInfoTools<a href="#userinfotools" class="hash-link" aria-label="Direct link to UserInfoTools" title="Direct link to UserInfoTools" translate="no">​</a></h2>
 <p>Tools for retrieving information about the current user</p>
-<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-8">Tools<a href="#tools-8" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-9">Tools<a href="#tools-9" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="getusername"><code>getUserName</code><a href="#getusername" class="hash-link" aria-label="Direct link to getusername" title="Direct link to getusername" translate="no">​</a></h4>
 <p>Get the username of the current user</p>
 <p><strong>Parameters:</strong> None</p>
@@ -405,8 +470,8 @@ requiring you to write custom function definitions.</p>
 <p>Get the system metadata of the current user as a string</p>
 <p><strong>Parameters:</strong> None</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="userinteractiontools">UserInteractionTools<a href="#userinteractiontools" class="hash-link" aria-label="Direct link to UserInteractionTools" title="Direct link to UserInteractionTools" translate="no">​</a></h2>
-<p>Tools for prompting user for input and decisions</p>
-<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-9">Tools<a href="#tools-9" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<p>Tools for asking the user questions and decisions in the Flow Execution Monitor. Execution pauses until the user answers.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-10">Tools<a href="#tools-10" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="asksinglechoice"><code>askSingleChoice</code><a href="#asksinglechoice" class="hash-link" aria-label="Direct link to asksinglechoice" title="Direct link to asksinglechoice" translate="no">​</a></h4>
 <p>Ask the user to select ONE answer from a list of choices. User sees the question and answer buttons in the monitor. Optionally supports custom text input and skip functionality.</p>
 <p><strong>Parameters:</strong></p>
@@ -443,7 +508,7 @@ requiring you to write custom function definitions.</p>
 <p><strong>Returns:</strong> JSON: { confirmed: boolean }</p>
 <h2 class="anchor anchorTargetStickyNavbar_vs49" id="utilitytools">UtilityTools<a href="#utilitytools" class="hash-link" aria-label="Direct link to UtilityTools" title="Direct link to UtilityTools" translate="no">​</a></h2>
 <p>Utility tools for data conversion and manipulation</p>
-<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-10">Tools<a href="#tools-10" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vs49" id="tools-11">Tools<a href="#tools-11" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_vs49" id="xmltomarkdown"><code>xmlToMarkdown</code><a href="#xmltomarkdown" class="hash-link" aria-label="Direct link to xmltomarkdown" title="Direct link to xmltomarkdown" translate="no">​</a></h4>
 <p>Convert XML content to Markdown format</p>
 <p><strong>Parameters:</strong></p>
@@ -459,6 +524,6 @@ requiring you to write custom function definitions.</p>
 <p>Validate and repair malformed XML</p>
 <p><strong>Parameters:</strong></p>
 <table><thead><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr></thead></table>
-<p>| <code>xml</code> | <code>string</code> | Yes | XML content to validate and repair |</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_Zzhg thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#configuration" class="table-of-contents__link toc-highlight">Configuration</a><ul><li><a href="#tool-aliases" class="table-of-contents__link toc-highlight">Tool Aliases</a></li><li><a href="#tool-alias-templates" class="table-of-contents__link toc-highlight">Tool Alias Templates</a></li></ul></li><li><a href="#contenttools" class="table-of-contents__link toc-highlight">ContentTools</a><ul><li><a href="#tools" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#containerinfotools" class="table-of-contents__link toc-highlight">ContainerInfoTools</a><ul><li><a href="#tools-1" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#customtools" class="table-of-contents__link toc-highlight">CustomTools</a><ul><li><a href="#tools-2" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#documentinfotools" class="table-of-contents__link toc-highlight">DocumentInfoTools</a><ul><li><a href="#tools-3" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#feedbacktools" class="table-of-contents__link toc-highlight">FeedbackTools</a><ul><li><a href="#tools-4" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#highlighttools" class="table-of-contents__link toc-highlight">HighlightTools</a><ul><li><a href="#tools-5" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#hubmcp" class="table-of-contents__link toc-highlight">HubMcp</a><ul><li><a href="#tools-6" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#tooldiscovery" class="table-of-contents__link toc-highlight">ToolDiscovery</a><ul><li><a href="#tools-7" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#userinfotools" class="table-of-contents__link toc-highlight">UserInfoTools</a><ul><li><a href="#tools-8" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#userinteractiontools" class="table-of-contents__link toc-highlight">UserInteractionTools</a><ul><li><a href="#tools-9" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#utilitytools" class="table-of-contents__link toc-highlight">UtilityTools</a><ul><li><a href="#tools-10" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Eidosmedia. Built with Docusaurus.</div></div></div></footer></div>
+<p>| <code>xml</code> | <code>string</code> | Yes | XML content to validate and repair |</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_Zzhg thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#configuration" class="table-of-contents__link toc-highlight">Configuration</a><ul><li><a href="#tool-aliases" class="table-of-contents__link toc-highlight">Tool Aliases</a></li><li><a href="#tool-alias-templates" class="table-of-contents__link toc-highlight">Tool Alias Templates</a></li><li><a href="#conditional-tools-when" class="table-of-contents__link toc-highlight">Conditional Tools (<code>when</code>)</a></li><li><a href="#provider-configuration-config" class="table-of-contents__link toc-highlight">Provider Configuration (<code>config</code>)</a></li></ul></li><li><a href="#contenttools" class="table-of-contents__link toc-highlight">ContentTools</a><ul><li><a href="#tools" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#containerinfotools" class="table-of-contents__link toc-highlight">ContainerInfoTools</a><ul><li><a href="#tools-1" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#customtools" class="table-of-contents__link toc-highlight">CustomTools</a><ul><li><a href="#tools-2" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#documentinfotools" class="table-of-contents__link toc-highlight">DocumentInfoTools</a><ul><li><a href="#tools-3" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#feedbacktools" class="table-of-contents__link toc-highlight">FeedbackTools</a><ul><li><a href="#tools-4" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#highlighttools" class="table-of-contents__link toc-highlight">HighlightTools</a><ul><li><a href="#tools-5" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#storyeditor" class="table-of-contents__link toc-highlight">StoryEditor</a><ul><li><a href="#configuration-1" class="table-of-contents__link toc-highlight">Configuration</a></li><li><a href="#tools-6" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#hubmcp" class="table-of-contents__link toc-highlight">HubMcp</a><ul><li><a href="#tools-7" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#tooldiscovery" class="table-of-contents__link toc-highlight">ToolDiscovery</a><ul><li><a href="#tools-8" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#userinfotools" class="table-of-contents__link toc-highlight">UserInfoTools</a><ul><li><a href="#tools-9" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#userinteractiontools" class="table-of-contents__link toc-highlight">UserInteractionTools</a><ul><li><a href="#tools-10" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#utilitytools" class="table-of-contents__link toc-highlight">UtilityTools</a><ul><li><a href="#tools-11" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Eidosmedia. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Step Library Overview | ProActions Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://em-al-wi.github.io/proactions-docs-next/step-library/overview"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Step Library Overview | ProActions Documentation"><meta data-rh="true" name="description" content="ProActions provides a comprehensive library of workflow steps organized into categories. Each step performs a specific function and can be combined to create powerful automation workflows."><meta data-rh="true" property="og:description" content="ProActions provides a comprehensive library of workflow steps organized into categories. Each step performs a specific function and can be combined to create powerful automation workflows."><link data-rh="true" rel="icon" href="/proactions-docs-next/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://em-al-wi.github.io/proactions-docs-next/step-library/overview"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs-next/step-library/overview" hreflang="en"><link data-rh="true" rel="alternate" href="https://em-al-wi.github.io/proactions-docs-next/step-library/overview" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Step Library Overview","item":"https://em-al-wi.github.io/proactions-docs-next/step-library/overview"}]}</script><link rel="stylesheet" href="/proactions-docs-next/assets/css/styles.3a413bed.css">
-<script src="/proactions-docs-next/assets/js/runtime~main.64492c5d.js" defer="defer"></script>
-<script src="/proactions-docs-next/assets/js/main.1645d3c0.js" defer="defer"></script>
+<script src="/proactions-docs-next/assets/js/runtime~main.fb069ffb.js" defer="defer"></script>
+<script src="/proactions-docs-next/assets/js/main.c6b02c9c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -207,7 +207,7 @@
 <p><strong><a class="" href="/proactions-docs-next/step-library/steps/OPENAI_DELETE_THREAD">OPENAI_DELETE_THREAD</a></strong> - Delete a thread using its id. Provide the thread object or id via inputs.</p>
 </li>
 <li class="">
-<p><strong><a class="" href="/proactions-docs-next/step-library/steps/OPENAI_IMAGE_GENERATION">OPENAI_IMAGE_GENERATION</a></strong> - Generate images using OpenAI image models (DALL·E and GPT-Image-1). Supports model, size, quality, count (n), response_format and other parameters. The generated images are stored in the configured output key or default <code>imageList</code>.</p>
+<p><strong><a class="" href="/proactions-docs-next/step-library/steps/OPENAI_IMAGE_GENERATION">OPENAI_IMAGE_GENERATION</a></strong> - Generate images using OpenAI GPT Image models (default gpt-image-2.5-sunburst). Supports model, size, quality, count (n), output_format and background. The generated images are stored in the configured output key or default <code>imageList</code>.</p>
 </li>
 <li class="">
 <p><strong><a class="" href="/proactions-docs-next/step-library/steps/OPENAI_SPEECH">OPENAI_SPEECH</a></strong> - Generate speech audio using the OpenAI Speech API (or corresponding Hub/Azure variants). Reads text from the default text input and returns an audio blob.</p>
@@ -309,7 +309,7 @@
 <p><strong><a class="" href="/proactions-docs-next/step-library/steps/MONITOR_TABLE">MONITOR_TABLE</a></strong> - Display tabular structured data in the Flow Monitor.</p>
 </li>
 <li class="">
-<p><strong><a class="" href="/proactions-docs-next/step-library/steps/PLAY_AUDIO">PLAY_AUDIO</a></strong> - Plays audio in a lightweight floating player. Audio source can be provided as a data URL, http(s) URL, or raw base64 via <code>cfg.in</code> or via the default text input. The step mounts a closed Shadow DOM audio player and resolves when the player is closed by the user.</p>
+<p><strong><a class="" href="/proactions-docs-next/step-library/steps/PLAY_AUDIO">PLAY_AUDIO</a></strong> - Plays audio in a lightweight floating player. Audio source can be provided as a data URL, http(s) URL, raw base64 or a Blob (e.g. <code>in: &#x27;{{ flowContext.blob }}&#x27;</code> after HUB_SPEECH) via <code>cfg.in</code>, or via the default text input. The step mounts a closed Shadow DOM audio player and resolves when the player is closed by the user.</p>
 </li>
 <li class="">
 <p><strong><a class="" href="/proactions-docs-next/step-library/steps/PROMPT">PROMPT</a></strong> - Shows a simple prompt to the user and stores the entered text into the default text output.</p>
